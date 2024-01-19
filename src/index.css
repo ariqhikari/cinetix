@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General */
+*::-webkit-scrollbar {
+  @apply h-[5px] w-[5px];
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-lg bg-primary-yellow;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-[#E0E0E0];
+}
+
+html,
+body,
+#root {
+  @apply lg:h-full;
+}
+
+body {
+  @apply lg:overflow-auto text-accent-black font-sans;
+}
+
+table {
+  @apply bg-[#FFB60233]
+}
+
+table th {
+  @apply bg-[#FFB60233] text-accent-black font-medium text-lg;
+}
+
+table * {
+  @apply p-3 text-center
+}
+
+.bg-grid {
+  @apply bg-[url('./assets/images/bg-grid.svg')] h-screen border-b-[10px] border-b-primary-yellow overflow-auto px-5 xl:px-14;
+}
+
+.card {
+  @apply py-3 px-5 bg-white shadow-[5px_5px_0px_0px] shadow-accent-black border-2 border-accent-black flex justify-center items-center;
+}
+
+.card-full {
+  @apply rounded-[100px]
+}
+
+.card-icon {
+  @apply w-20 h-20 p-3;
+}
+
+.card-form {
+  @apply rounded-2xl w-full py-4 font-medium outline-none
+}
+
+.jumbotron-title span {
+  @apply bg-primary-yellow h-4 absolute -z-10 bottom-0 block w-full;
+}
+
+.icon {
+  @apply flex h-[50px] w-[50px] items-center justify-center rounded-[50px] border-2 border-accent-black bg-white
+}
+
+.icon img {
+  @apply w-7
+}
+
+/* Auth */
+.auth-wrap {
+  @apply relative overflow-auto lg:h-screen;
+}
+
+/* Icon */
+.icon-arrow {
+  @apply flex h-[40px] w-[40px] items-center justify-center rounded-full border-2 p-2 md:h-[50px] md:w-[50px];
+}
+
+/* Sidebar */
+.sidebar {
+  @apply  h-full fixed z-10 flex-row flex-nowrap items-center justify-between  overflow-hidden  overflow-y-auto  pt-4 transition-all duration-300 lg:relative lg:m-5 lg:block lg:h-[95vh] lg:w-[8vw] ml-[-99rem] lg:ml-0;
+}
+
+.sidebar .text {
+  @apply transition-all lg:indent-[-99rem];
+}
+
+.sidebar .sidebar-heading img {
+  @apply hidden
+}
+
+.sidebar.active {
+  @apply fixed z-50 block w-[80vw] lg:relative lg:ml-5 lg:w-[350px] ml-0;
+}
+
+.sidebar.active .text {
+  text-indent: inherit;
+}
+
+.sidebar .sidebar-heading img.active {
+  @apply block
+}
+
+.list-sidebar {
+  @apply text-accent-black;
+}
+
+.list-sidebar li {
+  @apply items-center rounded-r-lg border-l-4 border-l-transparent px-6 transition hover:text-accent-black;
+}
+
+.list-sidebar svg {
+  @apply w-[25px];
+}
+
+.list-sidebar svg path {
+  @apply fill-medium-gray transition;
+}
+
+.list-sidebar li:hover svg path,
+.list-sidebar li.active svg path {
+  @apply fill-accent-black;
+}
+
+.list-sidebar li.active {
+  /* @apply border-l-primary-yellow bg-[#F4AE0054] text-accent-black; */
+}
+
+/* Button */
+.button {
+  @apply rounded-[100px] px-4 py-4 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
+}
+
+.kQcYu, .sc-gswNZR {
+  @apply !relative;
+}
+
+/* Swal */
+body.swal2-shown.swal2-height-auto {
+  @apply !h-full;
+}
+
+/* Text */
+.text-en {
+  @apply block text-[0.75em];
+}
+
+/* Step */
+.step-wizard-list {
+  @apply text-accent-black font-normal list-none flex relative z-10 rounded-[10px];
+}
+.step-wizard-list * {
+  @apply transition-[0.25s] duration-[ease-in];
+}
+.step-wizard-list .step-wizard-item {
+  @apply basis-0 grow max-w-full flex flex-col text-center relative;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+}
+
+.step-wizard-list .step-wizard-item + .step-wizard-item:after {
+  @apply content-[""] absolute w-full h-0.5 -translate-x-2/4 -z-10 border-2 border-dashed border-accent-black left-0 top-[19px];
+}
+.step-wizard-list .success + .step-wizard-item:after {
+  @apply border-accent-black;
+}
+.step-wizard-list .progress-count {
+  @apply h-10 w-10 flex items-center justify-center font-semibold relative z-10 mx-auto my-0 rounded-[50%] after:content-[""] after:h-10 after:w-10 after:absolute after:-translate-x-2/4 after:-translate-y-2/4 after:-z-10 after:rounded-[50%] after:border-2 after:border-solid after:border-accent-black after:left-2/4 after:top-2/4;
+}
+/* .step-wizard-list .success.current-item .progress-count {
+  @apply h-10 w-10 after:h-10 after:w-10;
+} */
+.step-wizard-list .progress-count:after {
+  @apply bg-white
+}
+.step-wizard-list .progress-label {
+  @apply text-sm mt-2.5 font-medium;
+}
+/* .step-wizard-list .current-item .progress-count:before,
+.step-wizard-list
+  .current-item
+  ~ .step-wizard-item:not(.success)
+  .progress-count:before {
+  @apply hidden;
+} */
+.step-wizard-list .success .progress-count:after,
+.step-wizard-list .current-item ~ .step-wizard-item .progress-count:after {
+  @apply bg-green;
+}
+.step-wizard-list .process .progress-count:after,
+.step-wizard-list .current-item ~ .step-wizard-item .progress-count:after {
+  @apply bg-primary-yellow;
+}
+.step-wizard-list
+  .current-item
+  ~ .step-wizard-item:not(.success)
+  .progress-count:after {
+  @apply h-5 w-5 border-accent-black;
+  background: #fff;
+}
+.step-wizard-list .current-item .progress-label {
+  @apply font-semibold;
+}
+.step-wizard-list
+  .current-item
+  ~ .step-wizard-item:not(.success)
+  .progress-label {
+  @apply text-[rgba(16,16,16,0.42)];
+}
+.step-wizard-list .current-item .progress-count:after {
+  @apply border-accent-black;
+  background: #fff;
+}
+.step-wizard-list .current-item .progress-count {
+  @apply text-accent-black;
+}
