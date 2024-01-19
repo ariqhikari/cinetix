@@ -37,10 +37,6 @@ table * {
   @apply p-3 text-center
 }
 
-.bg-grid {
-  @apply bg-[url('./assets/images/bg-grid.svg')] h-screen border-b-[10px] border-b-primary-yellow overflow-auto px-5 xl:px-14;
-}
-
 .card {
   @apply py-3 px-5 bg-white shadow-[5px_5px_0px_0px] shadow-accent-black border-2 border-accent-black flex justify-center items-center;
 }
