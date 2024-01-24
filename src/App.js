@@ -18,6 +18,9 @@ import Boarding from "pages/Boarding";
 // navbar
 import Navbar from "pages/Navbar";
 
+// footer
+import Footer from "pages/Footer";
+
 // keluhan
 import Keluhan from "pages/Keluhan";
 
