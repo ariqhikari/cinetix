@@ -14,6 +14,12 @@ import AuthorizeUser from "middleware/Auth";
 // boarding
 import Boarding from "pages/Boarding";
 
+// navbar
+import Navbar from "pages/Navbar";
+
+// keluhan
+import Keluhan from "pages/Keluhan";
+
 const App = () => {
   const location = useLocation();
 
@@ -33,7 +39,9 @@ const App = () => {
       >
         <Routes location={location}>
           <Route path="/" element={<Default />}>
-            <Route path="/" element={<Boarding />} />
+            {/* <Route path="/" element={<Boarding />} /> */}
+            <Route path="/" element={<Navbar />} />
+            {/* <Route path="/" element={<Keluhan />} /> */}
           </Route>
 
           {/* Not Found */}
