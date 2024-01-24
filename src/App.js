@@ -11,6 +11,7 @@ import AuthorizeUser from "middleware/Auth";
 
 // pages
 import Login from "pages/Login";
+import Pembayaran from "pages/Pembayaran";
 // boarding
 import Boarding from "pages/Boarding";
 
@@ -34,7 +35,8 @@ const App = () => {
         <Routes location={location}>
           <Route path="/" element={<Default />}>
             {/* <Route path="/" element={<Boarding />} /> */}
-            <Route path="/" element={<Login />} />
+            {/* <Route path="/" element={<Login />} /> */}
+            <Route path="/" element={<Pembayaran />} />
           </Route>
 
           {/* Not Found */}

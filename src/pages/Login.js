@@ -63,7 +63,7 @@ const Login = () => {
                 Masuk
               </button>
             </div>
-            <div className="">
+            <div>
               <p className="text-gray-500 mt-7 text-center text-sm">
                 Belum punya akun?
               </p>
