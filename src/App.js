@@ -15,6 +15,12 @@ import Pembayaran from "pages/Pembayaran";
 // boarding
 import Boarding from "pages/Boarding";
 
+// navbar
+import Navbar from "pages/Navbar";
+
+// keluhan
+import Keluhan from "pages/Keluhan";
+
 const App = () => {
   const location = useLocation();
 
