@@ -13,6 +13,7 @@ import AuthorizeUser from "middleware/Auth";
 import Home from "pages/Home";
 import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
+import Jadwal from "pages/Jadwal";
 
 // keluhan
 import Keluhan from "pages/Keluhan";
@@ -36,6 +37,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/Keluhan" element={<Keluhan />} />
+            <Route path="/Jadwal" element={<Jadwal />} />
           </Route>
 
           {/* Not Found */}

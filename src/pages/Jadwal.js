@@ -1,47 +1,44 @@
 const Jadwal = () => {
   return (
+    // static absolute object-center flex flex-col items-center
     <div class="relative h-[1001px] w-[1278px]">
-      <div class="border-stone-300 static absolute left-[72px] top-[99px] flex h-[86px] w-[86px] flex-col rounded-lg border-2 object-center">
-        <div class="text-gray-500 font-['Roboto'] text-base font-medium">
+      <div class="border-stone-300 static absolute left-[72px] top-[99px] flex h-[86px] w-[86px] flex-col items-center items-center rounded-lg border-2 object-center">
+        <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
           21 Oct
         </div>
         <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
       </div>
-      <div class="border-stone-300 absolute left-[182px] top-[99px] h-[86px] w-[86px] rounded-lg border-2"></div>
-      <div class="border-stone-300 absolute left-[292px] top-[99px] h-[86px] w-[86px] rounded-lg border-2"></div>
-      <div class="border-stone-300 absolute left-[403px] top-[99px] h-[86px] w-[86px] rounded-lg border-2"></div>
-      <div class="border-stone-300 absolute left-[513px] top-[99px] h-[86px] w-[86px] rounded-lg border-2"></div>
-      <div class="border-stone-300 absolute left-[623px] top-[99px] h-[86px] w-[86px] rounded-lg border-2"></div>
-      <div class="text-gray-500 absolute left-[198px] top-[120px] font-['Roboto'] text-base font-medium">
-        22 Oct
+      <div class="border-stone-300 static absolute left-[182px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
+        <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
+          21 Oct
+        </div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
       </div>
-      <div class="text-gray-500 absolute left-[311px] top-[123px] font-['Roboto'] text-base font-medium">
-        22 Oct
+      <div class="border-stone-300 static absolute absolute left-[403px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
+        <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
+          21 Oct
+        </div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
       </div>
-      <div class="text-gray-500 absolute left-[422px] top-[123px] font-['Roboto'] text-base font-medium">
-        22 Oct
+      <div class="border-stone-300 static absolute absolute left-[292px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
+        <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
+          21 Oct
+        </div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
       </div>
-      <div class="text-gray-500 absolute left-[532px] top-[123px] font-['Roboto'] text-base font-medium">
-        22 Oct
+      <div class="border-stone-300 static absolute absolute left-[513px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
+        <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
+          21 Oct
+        </div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
       </div>
-      <div class="text-gray-500 absolute left-[642px] top-[123px] font-['Roboto'] text-base font-medium">
-        22 Oct
+      <div class="border-stone-300 static absolute absolute left-[623px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
+        <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
+          21 Oct
+        </div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
       </div>
-      <div class="text-zinc-800 absolute left-[206px] top-[147px] font-['Roboto'] text-xl font-black">
-        SEL
-      </div>
-      <div class="text-zinc-800 absolute left-[315px] top-[147px] text-center font-['Roboto'] text-xl font-black">
-        RAB
-      </div>
-      <div class="text-zinc-800 absolute left-[424px] top-[147px] text-center font-['Roboto'] text-xl font-black">
-        KAM
-      </div>
-      <div class="text-zinc-800 absolute left-[535px] top-[147px] text-center font-['Roboto'] text-xl font-black">
-        JUM
-      </div>
-      <div class="text-zinc-800 absolute left-[645px] top-[147px] text-center font-['Roboto'] text-xl font-black">
-        JUM
-      </div>
+
       <div class="bg-gray-500 absolute left-0 top-[225px] h-px w-[708px]"></div>
       <div class="bg-gray-500 absolute left-[1px] top-[304px] h-px w-[707px]"></div>
       <div class="bg-gray-500 absolute left-[846px] top-[535px] h-px w-[432px]"></div>
