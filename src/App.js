@@ -15,13 +15,16 @@ import AuthorizeUser from "middleware/Auth";
 import Boarding from "pages/Boarding";
 
 // navbar
-import Navbar from "pages/Navbar";
+import Navbar from "components/Navbar";
 
 // footer
-import Footer from "pages/Footer";
+import Footer from "components/Footer";
 
 // keluhan
 import Keluhan from "pages/Keluhan";
+
+// detail transaksi
+import DetailTransaksi from "pages/DetailTransaksi"
 
 const App = () => {
   const location = useLocation();
@@ -42,10 +45,11 @@ const App = () => {
       >
         <Routes location={location}>
           <Route path="/" element={<Default />}>
-            {/* <Route path="/" element={<Boarding />} /> */}
-            {/* <Route path="/" element={<Navbar />} /> */}
+            <Route path="/" element={<Boarding />} />
+            <Route path="/" element={<Navbar />} />
             <Route path="/" element={<Footer />} />
-            {/* <Route path="/" element={<Keluhan />} /> */}
+            <Route path="/" element={<Keluhan />} />
+            <Route path="/" element={<DetailTransaksi />} />
           </Route>
 
           {/* Not Found */}
