@@ -1,6 +1,6 @@
 const Login = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray">
+    <div className="flex min-h-screen items-center justify-center bg-blue-gray-50">
       <div className="border-gray-300 w-full max-w-md rounded-md bg-white p-8 shadow-md">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <div className="flex justify-center">
