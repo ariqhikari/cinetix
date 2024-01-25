@@ -12,17 +12,10 @@ import AuthorizeUser from "middleware/Auth";
 // pages
 import Home from "pages/Home";
 import Pembayaran from "pages/Pembayaran";
-<<<<<<< HEAD
-import Jadwal from "pages/Jadwal";
-
-// boarding
-import Boarding from "pages/Boarding";
-=======
 import Login from "pages/Login";
 
 // keluhan
 import Keluhan from "pages/Keluhan";
->>>>>>> 8a1489cda23dfd6856acdb8caeef5742304be5db
 
 const App = () => {
   const location = useLocation();
