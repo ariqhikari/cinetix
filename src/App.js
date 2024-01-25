@@ -12,6 +12,8 @@ import AuthorizeUser from "middleware/Auth";
 // pages
 import Login from "pages/Login";
 import Pembayaran from "pages/Pembayaran";
+import Jadwal from "pages/Jadwal";
+
 // boarding
 import Boarding from "pages/Boarding";
 
@@ -36,7 +38,8 @@ const App = () => {
           <Route path="/" element={<Default />}>
             {/* <Route path="/" element={<Boarding />} /> */}
             {/* <Route path="/" element={<Login />} /> */}
-            <Route path="/" element={<Pembayaran />} />
+            <Route path="/" element={<Jadwal />} />
+            {/* <Route path="/" element={<Pembayaran />} /> */}
           </Route>
 
           {/* Not Found */}
