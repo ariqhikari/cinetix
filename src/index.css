@@ -18,7 +18,7 @@
 html,
 body,
 #root {
-  @apply lg:h-full;
+  /* @apply lg:h-full; */
 }
 
 body {
