@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
-const withMT = require("@material-tailwind/react/utils/withMT");
+const defaultTheme = require("tailwindcss/defaultTheme")
+const withMT = require("@material-tailwind/react/utils/withMT")
 
 module.exports = withMT({
   content: [
@@ -20,6 +20,8 @@ module.exports = withMT({
         "accent-gray": "#191919",
         "medium-gray": "#191919",
         "light-gray": "#191919",
+        greybutton: "#939393",
+        "grey-tulisan": "#9DA8BE",
         "primary-yellow": "#FFB602",
         "light-yellow": "#FFB60233",
         cream: "#FFF2D2",
@@ -32,4 +34,4 @@ module.exports = withMT({
     },
   },
   plugins: [],
-});
+})
