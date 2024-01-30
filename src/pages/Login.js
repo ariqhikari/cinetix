@@ -12,7 +12,7 @@ const Login = () => {
             </div>
 
             <h2 className="text-gray-900 my-5 text-center text-2xl font-bold leading-6 tracking-tight">
-              Sign in to your account
+              Masuk ke akun Anda
             </h2>
           </div>
 
@@ -23,7 +23,7 @@ const Login = () => {
                   htmlFor="email"
                   className="text-gray-900 block text-sm font-medium leading-6"
                 >
-                  Email address
+                  Alamat Email
                 </label>
                 <div className="mt-2">
                   <input
@@ -43,7 +43,7 @@ const Login = () => {
                     htmlFor="password"
                     className="text-gray-900 block text-sm font-medium leading-6"
                   >
-                    Password
+                    Kata Sandi
                   </label>
                 </div>
                 <div className="mt-2">
