@@ -13,8 +13,9 @@ import AuthorizeUser from "middleware/Auth";
 import Home from "pages/Home";
 import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
-import Jadwal from "pages/Jadwal";
-
+import DetailFilm from "pages/DetailFilm";
+import Example from "pages/Example";
+import ChoosingSeats from "pages/ChoosingSeats";
 // keluhan
 import Keluhan from "pages/Keluhan";
 
@@ -36,9 +37,11 @@ const App = () => {
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
             <Route path="/pembayaran" element={<Pembayaran />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/Login" element={<Login />} />
             <Route path="/Keluhan" element={<Keluhan />} />
-            <Route path="/Jadwal" element={<Jadwal />} />
+            <Route path="/DetailFilm" element={<DetailFilm />} />
+            <Route path="/Example" element={<Example />} />
+            <Route path="/ChoosingSeats" element={<ChoosingSeats />} />
           </Route>
 
           {/* Not Found */}

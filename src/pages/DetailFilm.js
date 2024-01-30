@@ -5,7 +5,7 @@ import thumbnail from "assets/images/thumbnail.png";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 
-const Jadwal = () => {
+const DetailFilm = () => {
   return (
     <>
       <Navbar />
@@ -18,7 +18,7 @@ const Jadwal = () => {
             {/* Sisi kiri */}
             <div class="mr-10 flex basis-3/5 flex-col">
               {/* Pilih tanggal Dinamis*/}
-              <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
+              {/* <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
                 <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300 ">
                   <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
                     21 Oct
@@ -67,7 +67,63 @@ const Jadwal = () => {
                     SEN
                   </p>
                 </div>
-              </div>
+              </div> */}
+
+              {/* <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
+                <input
+                  type="radio"
+                  id="option1"
+                  name="dateOption"
+                  className="hidden"
+                />
+                <label
+                  htmlFor="option1"
+                  className="button-container border-1 hover:bg-blue-gray100 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 focus:bg-black active:bg-blue-gray-200"
+                >
+                  <p className="text-gray-500 font-['Roboto'] text-lg font-semibold">
+                    21 Oct
+                  </p>
+                  <p className="text-gray-500 font-['Roboto'] text-xl font-black">
+                    SEN
+                  </p>
+                </label>
+
+                <input
+                  type="radio"
+                  id="option2"
+                  name="dateOption"
+                  className="hidden"
+                />
+                <label
+                  htmlFor="option2"
+                  className="button-container border-1 borderp-3 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 hover:bg-blue-gray-100 focus:bg-black active:bg-blue-gray-200"
+                >
+                  <p className="text-gray-500 font-['Roboto'] text-lg font-semibold">
+                    21 Oct
+                  </p>
+                  <p className="text-gray-500 font-['Roboto'] text-xl font-black">
+                    SEN
+                  </p>
+                </label>
+
+                <input
+                  type="radio"
+                  id="option3"
+                  name="dateOption"
+                  className="hidden"
+                />
+                <label
+                  htmlFor="option3"
+                  className="button-container border-1 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 hover:bg-blue-gray-100 focus:bg-black active:bg-blue-gray-200"
+                >
+                  <p className="text-gray-500 font-['Roboto'] text-lg font-semibold">
+                    21 Oct
+                  </p>
+                  <p className="text-gray-500 font-['Roboto'] text-xl font-black">
+                    SEN
+                  </p>
+                </label>
+              </div> */}
 
               {/* Tulisan BANDUNG */}
               <div>
@@ -327,4 +383,4 @@ const Jadwal = () => {
   );
 };
 
-export default Jadwal;
+export default DetailFilm;
