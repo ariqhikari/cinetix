@@ -6,7 +6,7 @@ import youtube from "assets/images/youtube.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 mt-10 border-t-2 border-blue-gray-50 p-8 text-black">
+    <footer className="bg-gray-800 mt-16 border-t-2 border-blue-gray-50 p-8 text-black">
       <div className="container mx-auto flex flex-wrap justify-between">
         {/* Logo perusahaan */}
         <div className="mb-4">

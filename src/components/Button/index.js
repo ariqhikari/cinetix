@@ -5,11 +5,9 @@ const Button = (props) => {
   const className = [props.className];
   let theme = "button";
 
-  if (props.isPrimary)
-    theme +=
-      " bg-primary-yellow text-white text-lg font-medium border-2 border-accent-black";
+  if (props.isPrimary) theme += " bg-dark-blue text-yellow text-lg font-medium";
   if (props.isSecondary)
-    theme += " bg-cream text-primary-yellow text-lg font-medium";
+    theme += " bg-white text-gray text-lg font-medium border border-gray";
   if (props.isDanger)
     theme += " bg-[#FF56781A] text-red text-lg font-medium border-2 border-red";
   if (props.isSuccess)
