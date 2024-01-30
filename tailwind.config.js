@@ -13,21 +13,22 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "accent-black": "#191919",
+        "accent-black": "#333333",
         "accent-gray": "#191919",
         "medium-gray": "#191919",
         "light-gray": "#191919",
-        "primary-yellow": "#FFB602",
+        yellow: "#F2C46F",
         "light-yellow": "#FFB60233",
         cream: "#FFF2D2",
         red: "#F37878",
         "light-red": "#EA433533",
         green: "#17FF8F",
-        gray: "#EBEBEB",
-        blue: "#C2F0FF",
+        gray: "#5A637A",
+        blue: "#118EEA",
+        "dark-blue": "#1A2C50",
       },
     },
   },

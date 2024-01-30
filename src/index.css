@@ -8,7 +8,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-primary-yellow;
+  @apply rounded-lg bg-yellow;
 }
 
 *::-webkit-scrollbar-track {
@@ -54,7 +54,7 @@ table * {
 }
 
 .jumbotron-title span {
-  @apply absolute bottom-0 -z-10 block h-4 w-full bg-primary-yellow;
+  @apply bg-primary-yellow absolute bottom-0 -z-10 block h-4 w-full;
 }
 
 .icon {
@@ -127,7 +127,7 @@ table * {
 
 /* Button */
 .button {
-  @apply rounded-[100px] px-4 py-4 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
+  @apply rounded-md px-10 py-2 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
 }
 
 .kQcYu,
@@ -145,76 +145,18 @@ body.swal2-shown.swal2-height-auto {
   @apply block text-[0.75em];
 }
 
-/* Step */
-.step-wizard-list {
-  @apply relative z-10 flex list-none rounded-[10px] font-normal text-accent-black;
-}
-.step-wizard-list * {
-  @apply transition-[0.25s] duration-[ease-in];
-}
-.step-wizard-list .step-wizard-item {
-  @apply relative flex max-w-full grow basis-0 flex-col text-center;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
+.arrow-slider {
+  @apply flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border border-blue-gray-50 bg-white shadow-md;
 }
 
-.step-wizard-list .step-wizard-item + .step-wizard-item:after {
-  @apply absolute left-0 top-[19px] -z-10 h-0.5 w-full -translate-x-2/4 border-2 border-dashed border-accent-black content-[""];
-}
-.step-wizard-list .success + .step-wizard-item:after {
-  @apply border-accent-black;
-}
-.step-wizard-list .progress-count {
-  @apply relative z-10 mx-auto my-0 flex h-10 w-10 items-center justify-center rounded-[50%] font-semibold after:absolute after:left-2/4 after:top-2/4 after:-z-10 after:h-10 after:w-10 after:-translate-x-2/4 after:-translate-y-2/4 after:rounded-[50%] after:border-2 after:border-solid after:border-accent-black after:content-[""];
-}
-/* .step-wizard-list .success.current-item .progress-count {
-  @apply h-10 w-10 after:h-10 after:w-10;
-} */
-.step-wizard-list .progress-count:after {
-  @apply bg-white;
-}
-.step-wizard-list .progress-label {
-  @apply mt-2.5 text-sm font-medium;
-}
-/* .step-wizard-list .current-item .progress-count:before,
-.step-wizard-list
-  .current-item
-  ~ .step-wizard-item:not(.success)
-  .progress-count:before {
-  @apply hidden;
-} */
-.step-wizard-list .success .progress-count:after,
-.step-wizard-list .current-item ~ .step-wizard-item .progress-count:after {
-  @apply bg-green;
-}
-.step-wizard-list .process .progress-count:after,
-.step-wizard-list .current-item ~ .step-wizard-item .progress-count:after {
-  @apply bg-primary-yellow;
-}
-.step-wizard-list
-  .current-item
-  ~ .step-wizard-item:not(.success)
-  .progress-count:after {
-  @apply h-5 w-5 border-accent-black;
-  background: #fff;
-}
-.step-wizard-list .current-item .progress-label {
-  @apply font-semibold;
-}
-.step-wizard-list
-  .current-item
-  ~ .step-wizard-item:not(.success)
-  .progress-label {
-  @apply text-[rgba(16,16,16,0.42)];
-}
-.step-wizard-list .current-item .progress-count:after {
-  @apply border-accent-black;
-  background: #fff;
-}
-.step-wizard-list .current-item .progress-count {
-  @apply text-accent-black;
+.seat {
+  @apply flex h-9 w-10 cursor-pointer select-none items-center justify-center rounded-md border border-gray font-semibold text-accent-gray transition-all;
 }
 
-.selectedColor {
-  background-color: #5500ff; /* replace with your desired color */
+.seat.selected {
+  @apply border-blue bg-blue text-white;
+}
+
+.seat.disabled {
+  @apply border-dark-blue bg-dark-blue text-white;
 }

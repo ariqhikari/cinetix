@@ -80,7 +80,7 @@ const ChoosingSeats = () => {
         <div className="mb-10 flex justify-between">
           <div className="flex items-center gap-4">
             <img src={ic_time} alt="Icon Time" />
-            <span className="text-dark-blue text-2xl font-medium">14:40</span>
+            <span className="text-2xl font-medium text-dark-blue">14:40</span>
             <svg
               width="17"
               height="10"
@@ -100,7 +100,7 @@ const ChoosingSeats = () => {
 
           <div className="flex gap-5">
             <div className="flex items-center gap-3">
-              <div className="bg-dark-blue h-4 w-4 border border-gray"></div>
+              <div className="h-4 w-4 border border-gray bg-dark-blue"></div>
               <p className="font-semibold">Terisi</p>
             </div>
             <div className="flex items-center gap-3">

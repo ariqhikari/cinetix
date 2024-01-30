@@ -13,11 +13,7 @@ import AuthorizeUser from "middleware/Auth";
 import Home from "pages/Home";
 import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
-import DetailFilm from "pages/DetailFilm";
-import Example from "pages/Example";
 import ChoosingSeats from "pages/ChoosingSeats";
-// keluhan
-import Keluhan from "pages/Keluhan";
 
 const App = () => {
   const location = useLocation();
@@ -37,11 +33,8 @@ const App = () => {
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
             <Route path="/pembayaran" element={<Pembayaran />} />
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Keluhan" element={<Keluhan />} />
-            <Route path="/DetailFilm" element={<DetailFilm />} />
-            <Route path="/Example" element={<Example />} />
-            <Route path="/ChoosingSeats" element={<ChoosingSeats />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/choosing-seats" element={<ChoosingSeats />} />
           </Route>
 
           {/* Not Found */}
