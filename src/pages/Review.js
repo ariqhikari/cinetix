@@ -1,7 +1,7 @@
 const Review = () => {
     return (
     <>
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm h-screen">
             <h1 className="text-center text-2xl">Review Pelanggan</h1><br/>
                 <form className="space-y-2" action="#" method="POST">
                     <label className="text-gray-900 block text-base font-medium leading-" for="nama">Nama</label>

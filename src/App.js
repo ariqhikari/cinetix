@@ -48,6 +48,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/review" element={<Review />} />
             <Route path="/jadwal" element={<Jadwal />} />
+            <Route path="/detail" element={<DetailTransaksi />} />
           </Route>
 
           {/* Not Found */}
