@@ -44,7 +44,7 @@ const Home = () => {
             <img
               src={thumbnail}
               alt=""
-              className="h-[75vh] w-full rounded-2xl object-cover"
+              className="h-[600px] w-full rounded-2xl object-cover"
             />
             <h2 className="mt-6 text-center text-xl font-bold">
               Spiderman : No Way Home
@@ -62,7 +62,7 @@ const Home = () => {
             <img
               src={thumbnail}
               alt=""
-              className="h-[75vh] w-full rounded-2xl object-cover"
+              className="h-[600px] w-full rounded-2xl object-cover"
             />
             <h2 className="mt-6 text-center text-xl font-bold">
               Spiderman : No Way Home
@@ -80,7 +80,7 @@ const Home = () => {
             <img
               src={thumbnail}
               alt=""
-              className="h-[75vh] w-full rounded-2xl object-cover"
+              className="h-[600px] w-full rounded-2xl object-cover"
             />
             <h2 className="mt-6 text-center text-xl font-bold">
               Spiderman : No Way Home
@@ -153,7 +153,7 @@ const Home = () => {
           <img
             src={thumbnail}
             alt=""
-            className="h-[75vh] w-full rounded-2xl object-cover"
+            className="h-[600px] w-full rounded-2xl object-cover"
           />
           <h2 className="mt-6 text-center text-xl font-bold">
             Spiderman : No Way Home
@@ -169,7 +169,7 @@ const Home = () => {
           <img
             src={thumbnail}
             alt=""
-            className="h-[75vh] w-full rounded-2xl object-cover"
+            className="h-[600px] w-full rounded-2xl object-cover"
           />
           <h2 className="mt-6 text-center text-xl font-bold">
             Spiderman : No Way Home
@@ -185,7 +185,7 @@ const Home = () => {
           <img
             src={thumbnail}
             alt=""
-            className="h-[75vh] w-full rounded-2xl object-cover"
+            className="h-[600px] w-full rounded-2xl object-cover"
           />
           <h2 className="mt-6 text-center text-xl font-bold">
             Spiderman : No Way Home
