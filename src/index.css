@@ -53,10 +53,6 @@ table * {
   @apply w-full rounded-2xl py-4 font-medium outline-none;
 }
 
-.jumbotron-title span {
-  @apply bg-primary-yellow absolute bottom-0 -z-10 block h-4 w-full;
-}
-
 .icon {
   @apply flex h-[50px] w-[50px] items-center justify-center rounded-[50px] border-2 border-accent-black bg-white;
 }

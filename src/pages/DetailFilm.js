@@ -18,8 +18,8 @@ const DetailFilm = () => {
             {/* Sisi kiri */}
             <div class="mr-10 flex basis-3/5 flex-col">
               {/* Pilih tanggal Dinamis*/}
-              {/* <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300 ">
+              <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
+                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 hover:bg-blue-gray-50 active:bg-blue-gray-100 ">
                   <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
                     21 Oct
                   </p>
@@ -27,103 +27,7 @@ const DetailFilm = () => {
                     SEN
                   </p>
                 </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-              </div> */}
-
-              {/* <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
-                <input
-                  type="radio"
-                  id="option1"
-                  name="dateOption"
-                  className="hidden"
-                />
-                <label
-                  htmlFor="option1"
-                  className="button-container border-1 hover:bg-blue-gray100 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 focus:bg-black active:bg-blue-gray-200"
-                >
-                  <p className="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p className="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </label>
-
-                <input
-                  type="radio"
-                  id="option2"
-                  name="dateOption"
-                  className="hidden"
-                />
-                <label
-                  htmlFor="option2"
-                  className="button-container border-1 borderp-3 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 hover:bg-blue-gray-100 focus:bg-black active:bg-blue-gray-200"
-                >
-                  <p className="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p className="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </label>
-
-                <input
-                  type="radio"
-                  id="option3"
-                  name="dateOption"
-                  className="hidden"
-                />
-                <label
-                  htmlFor="option3"
-                  className="button-container border-1 mx-2 flex flex-col items-center justify-center rounded-lg border p-3 hover:bg-blue-gray-100 focus:bg-black active:bg-blue-gray-200"
-                >
-                  <p className="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p className="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </label>
-              </div> */}
+              </div>
 
               {/* Tulisan BANDUNG */}
               <div>
@@ -168,40 +72,7 @@ const DetailFilm = () => {
                 </div>
                 {/* Pilihan Jam */}
                 <div className="relative flex w-[350px] grow-0 flex-row flex-wrap py-2">
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
+                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border hover:bg-blue-gray-50 active:bg-blue-gray-100">
                     <p class="font-['Roboto'] text-sm font-bold">14:40</p>
                   </div>
                 </div>
@@ -218,40 +89,7 @@ const DetailFilm = () => {
                   </div>
                 </div>
                 <div className="relative flex w-[350px] grow-0 flex-row flex-wrap py-2">
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
+                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border hover:bg-blue-gray-50 active:bg-blue-gray-100">
                     <p class="font-['Roboto'] text-sm font-bold">14:40</p>
                   </div>
                 </div>

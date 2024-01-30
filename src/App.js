@@ -14,6 +14,7 @@ import Home from "pages/Home";
 import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
 import ChoosingSeats from "pages/ChoosingSeats";
+import DetailFilm from "pages/DetailFilm";
 
 const App = () => {
   const location = useLocation();
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/login" element={<Login />} />
             <Route path="/choosing-seats" element={<ChoosingSeats />} />
+            <Route path="/detail-film" element={<DetailFilm />} />
           </Route>
 
           {/* Not Found */}
