@@ -10,11 +10,11 @@ const Navbar = () => {
   };
 
   return (
-    <header className="mx-20 mt-5 mb-10 flex items-center justify-between">
+    <header className="mx-5 mt-5 mb-10 flex items-center justify-between lg:mx-20">
       <div className="flex items-center">
         <img src={CinéTix} alt="Logo" className="mr-5 h-8" />
       </div>
-      <div className="flex items-center">
+      <div className="hidden items-center md:flex">
         <a href="#" className="hover:text-blue-500 mr-5">
           Beranda
         </a>
