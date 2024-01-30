@@ -16,6 +16,7 @@ import Login from "pages/Login"
 import Jadwal from "pages/Jadwal"
 import PembayaranNext2 from "pages/PembayaranSucces"
 import List_film from "pages/List_Film"
+import Histori from "pages/Histoeri"
 
 // keluhan
 import Keluhan from "pages/Keluhan"
@@ -43,6 +44,7 @@ const App = () => {
             <Route path="/Jadwal" element={<Jadwal />} />
             <Route path="/pembayaran2" element={<PembayaranNext2 />} />
             <Route path="/listfilm" element={<List_film />} />
+            <Route path="/historia" element={<Histori />} />
           </Route>
 
           {/* Not Found */}
