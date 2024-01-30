@@ -10,33 +10,33 @@ const Jadwal = () => {
       </div>
       <div class="border-stone-300 static absolute left-[182px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
         <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
-          21 Oct
+          22 Oct
         </div>
-        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEL</div>
       </div>
       <div class="border-stone-300 static absolute absolute left-[403px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
         <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
-          21 Oct
+          23 Oct
         </div>
-        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">RAB</div>
       </div>
       <div class="border-stone-300 static absolute absolute left-[292px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
         <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
-          21 Oct
+          24 Oct
         </div>
-        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">KAM</div>
       </div>
       <div class="border-stone-300 static absolute absolute left-[513px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
         <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
-          21 Oct
+          25 Oct
         </div>
-        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">JUM</div>
       </div>
       <div class="border-stone-300 static absolute absolute left-[623px] top-[99px] flex h-[86px] w-[86px] flex-col items-center rounded-lg border-2 object-center">
         <div class="text-gray-500 m-3 font-['Roboto'] text-base font-medium">
-          21 Oct
+          26 Oct
         </div>
-        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SEN</div>
+        <div class="text-zinc-800 font-['Roboto'] text-xl font-black">SAB</div>
       </div>
 
       <div class="bg-gray-500 absolute left-0 top-[225px] h-px w-[708px]"></div>

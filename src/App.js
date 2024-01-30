@@ -15,9 +15,6 @@ import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
 import Jadwal from "pages/Jadwal";
 
-// keluhan
-import Keluhan from "pages/Keluhan";
-
 // navbar
 import Navbar from "components/Navbar";
 
@@ -25,10 +22,10 @@ import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 
 // keluhan
-import Keluhan from "pages/Keluhan";
+import Review from "pages/Review";
 
 // detail transaksi
-import DetailTransaksi from "pages/DetailTransaksi"
+import DetailTransaksi from "pages/DetailTransaksi";
 
 const App = () => {
   const location = useLocation();
@@ -46,19 +43,11 @@ const App = () => {
       <PageTransition>
         <Routes location={location}>
           <Route path="/" element={<Default />}>
-<<<<<<< HEAD
-            <Route path="/" element={<Boarding />} />
-            <Route path="/" element={<Navbar />} />
-            <Route path="/" element={<Footer />} />
-            <Route path="/" element={<Keluhan />} />
-            <Route path="/" element={<DetailTransaksi />} />
-=======
             <Route path="/" element={<Home />} />
             <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/Keluhan" element={<Keluhan />} />
-            <Route path="/Jadwal" element={<Jadwal />} />
->>>>>>> 12e1c5d64f1ccb1a0283af3a2854f84f02e5e25e
+            <Route path="/review" element={<Review />} />
+            <Route path="/jadwal" element={<Jadwal />} />
           </Route>
 
           {/* Not Found */}
