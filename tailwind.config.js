@@ -16,7 +16,7 @@ module.exports = withMT({
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "accent-black": "#191919",
+        "accent-black": "#333333",
         "accent-gray": "#191919",
         "medium-gray": "#191919",
         "light-gray": "#191919",
@@ -27,7 +27,8 @@ module.exports = withMT({
         "light-red": "#EA433533",
         green: "#17FF8F",
         gray: "#5A637A",
-        blue: "#C2F0FF",
+        blue: "#118EEA",
+        "dark-blue": "#1A2C50",
       },
     },
   },

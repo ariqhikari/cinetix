@@ -123,7 +123,7 @@ table * {
 
 /* Button */
 .button {
-  @apply rounded-[100px] px-4 py-4 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
+  @apply rounded-md px-10 py-2 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
 }
 
 .kQcYu, .sc-gswNZR {
@@ -142,4 +142,16 @@ body.swal2-shown.swal2-height-auto {
 
 .arrow-slider {
   @apply w-16 h-16 cursor-pointer rounded-full bg-white shadow-md flex items-center justify-center border border-blue-gray-50;
+}
+
+.seat {
+  @apply flex h-9 w-10 cursor-pointer items-center justify-center rounded-md border border-gray font-semibold text-accent-gray transition-all select-none
+}
+
+.seat.selected {
+  @apply bg-blue border-blue text-white
+}
+
+.seat.disabled {
+  @apply bg-dark-blue border-dark-blue text-white
 }
