@@ -31,11 +31,14 @@ const Home = () => {
         <Swiper
           ref={sliderRef}
           spaceBetween={50}
-          slidesPerView={2}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          className="mx-80 mt-10"
+          slidesPerView={1}
           loop={true}
+          breakpoints={{
+            576: {
+              slidesPerView: 2,
+            },
+          }}
+          className="mx-5 mt-10 lg:mx-80"
         >
           <SwiperSlide>
             <img
@@ -134,13 +137,9 @@ const Home = () => {
         </div>
       </div>
       <div className="my-20">
-        <img
-          src={banner}
-          alt=""
-          className="h-[30vh] w-full rounded-2xl object-cover"
-        />
+        <img src={banner} alt="" className="w-full object-cover lg:h-[30vh]" />
       </div>
-      <div className="mx-20 flex justify-between">
+      <div className="mx-5 flex justify-between lg:mx-20">
         <div>
           <h4 className="text-xl font-semibold">Akan Datang</h4>
           <p>Tunggu kehadirannya di bioskop kesayangan kamu!</p>
@@ -149,7 +148,7 @@ const Home = () => {
           Lihat Semua
         </a>
       </div>
-      <div className="mx-20 my-14 grid grid-cols-3 gap-5">
+      <div className="mx-5 my-14 grid gap-5 md:grid-cols-2 lg:mx-20 lg:grid-cols-3">
         <div>
           <img
             src={thumbnail}
