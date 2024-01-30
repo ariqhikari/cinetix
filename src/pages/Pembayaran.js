@@ -75,12 +75,14 @@ const Pembayaran = () => {
             <h2 className="mb-0 text-lg font-semibold">Detail Transaksi</h2>
             <div className="mb-2 flex justify-between">
               <p>Regular seat</p>
-              <p>Rp 70,000 x 3</p>
+              <p className="ml-80 ">Rp 70.000</p>
+              <p className="text-grey-tulisan">x3</p>
             </div>
             <div className="mb-2 flex justify-between">
               <p>Biaya Layanan</p>
 
-              <p>Rp 3,000 x 3</p>
+              <p className="ml-80">Rp 3.000</p>
+              <p className="text-grey-tulisan">x3</p>
             </div>
             <br></br>
             <hr className="border-blue-gray-400"></hr>
