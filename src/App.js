@@ -21,7 +21,10 @@ import Review from "pages/Review";
 import FilmList from "pages/FilmList";
 
 // admin pages
-import Sidebar from "components/Sidebar";
+import AddMovie from "pages/AddMovie";
+import EditMovie from "pages/EditMovie";
+import AddSchedule from "pages/AddSchedule";
+import EditSchedule from "pages/EditSchedule";
 
 const App = () => {
   const location = useLocation();
@@ -51,7 +54,10 @@ const App = () => {
             <Route path="/detail-transaksi" element={<TransactionDetail/>}/>
             <Route path="/histori" element={<History />} />
             <Route path="/review" element={<Review />} />
-            <Route path="/sidebar" element={<Sidebar />} />
+            <Route path="/add-movie" element={<AddMovie />} />
+            <Route path="/edit-movie" element={<EditMovie />} />
+            <Route path="/add-schedule" element={<AddSchedule />} />
+            <Route path="/edit-schedule" element={<EditSchedule />} />
           </Route>
 
           {/* Not Found */}
