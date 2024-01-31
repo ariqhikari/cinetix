@@ -1,9 +1,8 @@
-import Navbar from "components/Navbar"
-import Footer from "components/Footer"
-import foto from "assets/images/github.png"
-import banner from "assets/images/banner.png"
-import thumbnail from "assets/images/thumbnail.png"
-const List_film = () => {
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import thumbnail from "assets/images/thumbnail.png";
+
+const ListFilm = () => {
   return (
     <>
       <Navbar />
@@ -158,6 +157,6 @@ const List_film = () => {
 
       <Footer />
     </>
-  )
-}
-export default List_film
+  );
+};
+export default ListFilm;

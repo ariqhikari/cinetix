@@ -1,8 +1,8 @@
-import Navbar from "components/Navbar"
-import Footer from "components/Footer"
-import foto from "assets/images/github.png"
-import Cboard from "assets/images/Clapperboard.png"
-const PembayaranNext2 = () => {
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import Cboard from "assets/images/Clapperboard.png";
+
+const TransactionSuccess = () => {
   return (
     <>
       <Navbar />
@@ -27,13 +27,13 @@ const PembayaranNext2 = () => {
           </p>
         </div>
         <div className="mt-5 flex justify-center">
-          <button className="border-blue-500 rounded-lg border px-4 py-2 text-grey-tulisan">
+          <button className="border-blue-500 text-grey-tulisan rounded-lg border px-4 py-2">
             Tiket Saya
           </button>
         </div>
       </div>
       <Footer />
     </>
-  )
-}
-export default PembayaranNext2
+  );
+};
+export default TransactionSuccess;
