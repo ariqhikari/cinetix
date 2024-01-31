@@ -25,18 +25,6 @@ body {
   @apply font-sans text-accent-black lg:overflow-auto;
 }
 
-table {
-  @apply bg-[#FFB60233];
-}
-
-table th {
-  @apply bg-[#FFB60233] text-lg font-medium text-accent-black;
-}
-
-table * {
-  @apply p-3 text-center;
-}
-
 .card {
   @apply flex items-center justify-center border-2 border-accent-black bg-white py-3 px-5 shadow-[5px_5px_0px_0px] shadow-accent-black;
 }
@@ -155,4 +143,36 @@ body.swal2-shown.swal2-height-auto {
 
 .seat.disabled {
   @apply border-dark-blue bg-dark-blue text-white;
+}
+
+.date {
+  @apply flex h-20 w-20 cursor-pointer items-center justify-center rounded-lg border border-gray transition-all;
+}
+
+.date.selected {
+  @apply border-dark-blue bg-dark-blue;
+}
+
+.date span {
+  @apply text-gray;
+}
+
+.date .day {
+  @apply text-accent-black;
+}
+
+.date.selected .day {
+  @apply text-white;
+}
+
+.time {
+  @apply flex h-10 w-20 cursor-pointer select-none items-center justify-center rounded border border-gray font-semibold text-accent-black transition-all;
+}
+
+.time.selected {
+  @apply border-dark-blue bg-dark-blue text-white;
+}
+
+.time.disabled {
+  @apply cursor-not-allowed border-[#DADFE8] bg-[#DADFE8] text-[#9DA8BE];
 }
