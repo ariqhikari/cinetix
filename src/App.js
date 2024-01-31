@@ -11,10 +11,13 @@ import AuthorizeUser from "middleware/Auth";
 
 // pages
 import Home from "pages/Home";
-import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
-import ChoosingSeats from "pages/ChoosingSeats";
-import DetailFilm from "pages/DetailFilm";
+import ListFilm from "pages/ListFilm";
+import Schedule from "pages/Schedule";
+import Transaction from "pages/Transaction";
+import TransactionSuccess from "pages/TransactionSucces";
+import History from "pages/History";
+import Keluhan from "pages/Keluhan";
 
 const App = () => {
   const location = useLocation();
@@ -33,10 +36,16 @@ const App = () => {
         <Routes location={location}>
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
-            <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/choosing-seats" element={<ChoosingSeats />} />
-            <Route path="/detail-film" element={<DetailFilm />} />
+            <Route path="/list-film" element={<ListFilm />} />
+            <Route path="/jadwal" element={<Schedule />} />
+            <Route path="/pembayaran" element={<Transaction />} />
+            <Route
+              path="/pembayaran-berhasil"
+              element={<TransactionSuccess />}
+            />
+            <Route path="/histori" element={<History />} />
+            <Route path="/keluhan" element={<Keluhan />} />
           </Route>
 
           {/* Not Found */}
