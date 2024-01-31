@@ -16,13 +16,14 @@ import Login from "pages/Login"
 import Jadwal from "pages/Jadwal"
 import PembayaranNext2 from "pages/PembayaranSucces"
 import List_film from "pages/List_Film"
-import Histori from "pages/Histoeri"
+import Histori from "pages/TiketAktif"
+import DaftarTransaksi from "pages/DaftarTransaksi"
+import Newtest from "pages/Newtest"
 
 // keluhan
 import Keluhan from "pages/Keluhan"
-import Home from "pages/Home"
-import Pembayaran from "pages/Pembayaran"
-import Login from "pages/Login"
+// import Pembayaran from "pages/Pembayaran"
+// import Login from "pages/Login"
 import ChoosingSeats from "pages/ChoosingSeats"
 
 const App = () => {
@@ -49,7 +50,9 @@ const App = () => {
             <Route path="/Jadwal" element={<Jadwal />} />
             <Route path="/pembayaran2" element={<PembayaranNext2 />} />
             <Route path="/listfilm" element={<List_film />} />
-            <Route path="/historia" element={<Histori />} />
+            <Route path="/tiket-aktif" element={<Histori />} />
+            <Route path="/daftar-transaksi" element={<DaftarTransaksi />} />
+            <Route path="/testing" element={<Newtest />} />
           </Route>
 
           {/* Not Found */}
