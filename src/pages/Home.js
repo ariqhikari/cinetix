@@ -11,6 +11,8 @@ import banner from "assets/images/banner.png"
 
 import "swiper/css";
 
+import "swiper/css";
+
 const Home = () => {
   const sliderRef = useRef(null);
 
