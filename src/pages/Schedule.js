@@ -5,7 +5,7 @@ import thumbnail from "assets/images/thumbnail.png";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 
-const Jadwal = () => {
+const Schedule = () => {
   return (
     <>
       <Navbar />
@@ -327,4 +327,4 @@ const Jadwal = () => {
   );
 };
 
-export default Jadwal;
+export default Schedule;

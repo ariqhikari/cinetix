@@ -3,7 +3,7 @@ import Navbar from 'components/Navbar';
 import Footer from 'components/Footer';
 import Back from 'assets/images/Back.png';
 
-const DetailTransaksi = () => {
+const TransactionDetail = () => {
   return (
     <>
       <Navbar />
@@ -23,8 +23,8 @@ const DetailTransaksi = () => {
             </div>
             <div className="info-row flex mb-2">
                 <div className="text-lg ml-20">
-                <div className="text-lg text-[#9DA8BE] ml-11">Kelas</div>
-                <div className="text-lg font-medium text-white ml-11">Regular 2D</div>
+                <div className="text-lg text-[#9DA8BE] ml-10">Kelas</div>
+                <div className="text-lg font-medium text-white ml-10">Regular 2D</div>
                 </div>
             </div>
             </div>
@@ -43,8 +43,8 @@ const DetailTransaksi = () => {
             </div>
             <div className="info-row flex mb-2">
                 <div className="text-lg mr-4">
-                <div className="text-lg text-[#9DA8BE] ml-4">Studio</div>
-                <div className="text-lg font-medium text-white ml-4">Studio 1</div>
+                <div className="text-lg text-[#9DA8BE] ml-5">Studio</div>
+                <div className="text-lg font-medium text-white ml-5">Studio 1</div>
                 </div>
             </div>
             </div>
@@ -115,4 +115,4 @@ const DetailTransaksi = () => {
   );
 };
 
-export default DetailTransaksi;
+export default TransactionDetail;

@@ -8,7 +8,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  @apply rounded-lg bg-primary-yellow;
+  @apply rounded-lg bg-yellow;
 }
 
 *::-webkit-scrollbar-track {
@@ -51,10 +51,6 @@ table * {
 
 .card-form {
   @apply rounded-2xl w-full py-4 font-medium outline-none
-}
-
-.jumbotron-title span {
-  @apply bg-primary-yellow h-4 absolute -z-10 bottom-0 block w-full;
 }
 
 .icon {
@@ -127,7 +123,7 @@ table * {
 
 /* Button */
 .button {
-  @apply rounded-[100px] px-4 py-4 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
+  @apply rounded-md px-10 py-2 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
 }
 
 .kQcYu, .sc-gswNZR {
@@ -144,72 +140,18 @@ body.swal2-shown.swal2-height-auto {
   @apply block text-[0.75em];
 }
 
-/* Step */
-.step-wizard-list {
-  @apply text-accent-black font-normal list-none flex relative z-10 rounded-[10px];
-}
-.step-wizard-list * {
-  @apply transition-[0.25s] duration-[ease-in];
-}
-.step-wizard-list .step-wizard-item {
-  @apply basis-0 grow max-w-full flex flex-col text-center relative;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
+.arrow-slider {
+  @apply w-16 h-16 cursor-pointer rounded-full bg-white shadow-md flex items-center justify-center border border-blue-gray-50;
 }
 
-.step-wizard-list .step-wizard-item + .step-wizard-item:after {
-  @apply content-[""] absolute w-full h-0.5 -translate-x-2/4 -z-10 border-2 border-dashed border-accent-black left-0 top-[19px];
+.seat {
+  @apply flex h-9 w-10 cursor-pointer items-center justify-center rounded-md border border-gray font-semibold text-accent-gray transition-all select-none
 }
-.step-wizard-list .success + .step-wizard-item:after {
-  @apply border-accent-black;
+
+.seat.selected {
+  @apply bg-blue border-blue text-white
 }
-.step-wizard-list .progress-count {
-  @apply h-10 w-10 flex items-center justify-center font-semibold relative z-10 mx-auto my-0 rounded-[50%] after:content-[""] after:h-10 after:w-10 after:absolute after:-translate-x-2/4 after:-translate-y-2/4 after:-z-10 after:rounded-[50%] after:border-2 after:border-solid after:border-accent-black after:left-2/4 after:top-2/4;
-}
-/* .step-wizard-list .success.current-item .progress-count {
-  @apply h-10 w-10 after:h-10 after:w-10;
-} */
-.step-wizard-list .progress-count:after {
-  @apply bg-white
-}
-.step-wizard-list .progress-label {
-  @apply text-sm mt-2.5 font-medium;
-}
-/* .step-wizard-list .current-item .progress-count:before,
-.step-wizard-list
-  .current-item
-  ~ .step-wizard-item:not(.success)
-  .progress-count:before {
-  @apply hidden;
-} */
-.step-wizard-list .success .progress-count:after,
-.step-wizard-list .current-item ~ .step-wizard-item .progress-count:after {
-  @apply bg-green;
-}
-.step-wizard-list .process .progress-count:after,
-.step-wizard-list .current-item ~ .step-wizard-item .progress-count:after {
-  @apply bg-primary-yellow;
-}
-.step-wizard-list
-  .current-item
-  ~ .step-wizard-item:not(.success)
-  .progress-count:after {
-  @apply h-5 w-5 border-accent-black;
-  background: #fff;
-}
-.step-wizard-list .current-item .progress-label {
-  @apply font-semibold;
-}
-.step-wizard-list
-  .current-item
-  ~ .step-wizard-item:not(.success)
-  .progress-label {
-  @apply text-[rgba(16,16,16,0.42)];
-}
-.step-wizard-list .current-item .progress-count:after {
-  @apply border-accent-black;
-  background: #fff;
-}
-.step-wizard-list .current-item .progress-count {
-  @apply text-accent-black;
+
+.seat.disabled {
+  @apply bg-dark-blue border-dark-blue text-white
 }

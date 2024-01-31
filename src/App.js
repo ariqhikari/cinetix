@@ -11,21 +11,17 @@ import AuthorizeUser from "middleware/Auth";
 
 // pages
 import Home from "pages/Home";
-import Pembayaran from "pages/Pembayaran";
 import Login from "pages/Login";
-import Jadwal from "pages/Jadwal";
-
-// navbar
-import Navbar from "components/Navbar";
-
-// footer
-import Footer from "components/Footer";
-
-// keluhan
+import Schedule from "pages/Schedule";
+import Transaction from "pages/Transaction";
+import TransactionSuccess from "pages/TransactionSucces";
+import TransactionDetail from "pages/TransactionDetail";
+import History from "pages/History";
 import Review from "pages/Review";
+import FilmList from "pages/FilmList";
 
-// detail transaksi
-import DetailTransaksi from "pages/DetailTransaksi";
+// admin pages
+import Sidebar from "components/Sidebar";
 
 const App = () => {
   const location = useLocation();
@@ -44,11 +40,18 @@ const App = () => {
         <Routes location={location}>
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
-            <Route path="/pembayaran" element={<Pembayaran />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/list-film" element={<FilmList />} />
+            <Route path="/jadwal" element={<Schedule />} />
+            <Route path="/pembayaran" element={<Transaction />} />
+            <Route
+              path="/pembayaran-berhasil"
+              element={<TransactionSuccess />}
+            />
+            <Route path="/detail-transaksi" element={<TransactionDetail/>}/>
+            <Route path="/histori" element={<History />} />
             <Route path="/review" element={<Review />} />
-            <Route path="/jadwal" element={<Jadwal />} />
-            <Route path="/detail" element={<DetailTransaksi />} />
+            <Route path="/sidebar" element={<Sidebar />} />
           </Route>
 
           {/* Not Found */}
