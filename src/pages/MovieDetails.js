@@ -5,16 +5,19 @@ import thumbnail from "assets/images/thumbnail.png";
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 
-const DetailFilm = () => {
+const MovieDetails = () => {
   return (
     <>
       <Navbar />
-      <div className="relative mx-2 flex min-h-screen flex-col p-1">
+      <div className="relative mx-1 flex min-h-screen flex-col">
         <form className="space-y-4" action="#" method="POST">
-          <div className="flex h-[50px] grow-0 items-center p-4 text-2xl font-semibold">
-            Jadwal
+          <div className="mx-20">
+            <h1 className="mb-4 text-3xl font-semibold">JADWAL</h1>
+            <p className="text-gray">
+              Pilih jadwal bioskop yang akan kamu tonton
+            </p>
           </div>
-          <div class="justfy-center relative mt-2 flex h-[800px] flex-row gap-20 px-4">
+          <div class="justfy-center relative mt-2 flex h-[800px] flex-row gap-20 px-5">
             {/* Sisi kiri */}
             <div class="mr-10 flex basis-3/5 flex-col">
               {/* Pilih tanggal Dinamis*/}
@@ -221,4 +224,4 @@ const DetailFilm = () => {
   );
 };
 
-export default DetailFilm;
+export default MovieDetails;

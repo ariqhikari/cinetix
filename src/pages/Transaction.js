@@ -1,7 +1,7 @@
-import Navbar from "components/Navbar"
-import Footer from "components/Footer"
-import stars from "assets/images/star filled.png"
-import arrowLeft from "assets/images/arrow-kiri.png"
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import stars from "assets/images/star filled.png";
+import arrowLeft from "assets/images/arrow-kiri.png";
 
 const Pembayaran = () => {
   return (
@@ -11,7 +11,7 @@ const Pembayaran = () => {
         className="justify-left mb-10 mt-0 flex min-h-screen  items-center"
         style={{ marginTop: "-10px" }}
       >
-        <div className="flex w-full flex-col items-center rounded-md bg-white p-8 shadow-md lg:w-4/5 lg:flex-row lg:items-start">
+        <div className="flex w-full flex-col items-center rounded-md bg-white p-8 lg:w-4/5 lg:flex-row lg:items-start">
           <div className="mb-7 text-center lg:mb-0 lg:w-1/2 lg:text-left">
             <h1
               className="mb-10 mt-10 text-4xl font-bold"
@@ -123,7 +123,7 @@ const Pembayaran = () => {
 
             {/* Button Beli Tiket */}
             <div className="flex justify-center">
-              <button className="rounded-lg bg-greybutton px-4 py-2 text-white">
+              <button className="bg-greybutton rounded-lg px-4 py-2 text-white">
                 Beli Tiket
               </button>
             </div>
@@ -134,7 +134,7 @@ const Pembayaran = () => {
         <Footer />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Pembayaran
+export default Pembayaran;
