@@ -18,6 +18,8 @@ import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
 import History from "pages/History";
+import DetailMovie from "pages/DetailMovie";
+
 const App = () => {
   const location = useLocation();
 
@@ -45,6 +47,7 @@ const App = () => {
               element={<TransactionSuccess />}
             />
             <Route path="/histori" element={<History />} />
+            <Route path="/detail-film" element={<DetailMovie />} />
           </Route>
 
           {/* Not Found */}

@@ -1,8 +1,8 @@
-import Navbar from "components/Navbar"
-import Footer from "components/Footer"
-import tiketaktif from "assets/images/Vector.png"
-import dftrtrnsksi from "assets/images/Group 43.png"
-import lokasi from "assets/images/lokasi.png"
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
+import tiketaktif from "assets/images/Vector.png";
+import dftrtrnsksi from "assets/images/Group 43.png";
+import lokasi from "assets/images/lokasi.png";
 const DaftarTransaksi = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const DaftarTransaksi = () => {
       <div className=" justtify-between flex">
         {/* Kiri */}
         <div
-          className="ml-20 mt-10  justify-center bg-sidebar"
+          className="ml-10 mt-10  justify-center bg-sidebar"
           style={{ width: "300px" }}
         >
           <div className="flex justify-center">
@@ -47,7 +47,7 @@ const DaftarTransaksi = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
@@ -68,7 +68,7 @@ const DaftarTransaksi = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
@@ -89,7 +89,7 @@ const DaftarTransaksi = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
@@ -110,7 +110,7 @@ const DaftarTransaksi = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
@@ -131,7 +131,7 @@ const DaftarTransaksi = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
@@ -143,6 +143,6 @@ const DaftarTransaksi = () => {
       </div>
       <Footer />
     </>
-  )
-}
-export default DaftarTransaksi
+  );
+};
+export default DaftarTransaksi;
