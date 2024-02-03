@@ -19,7 +19,6 @@ import TransactionSuccess from "pages/TransactionSucces";
 import History from "pages/History";
 import Keluhan from "pages/Keluhan";
 import MovieDetails from "pages/MovieDetails";
-
 const App = () => {
   const location = useLocation();
 
