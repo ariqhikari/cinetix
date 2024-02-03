@@ -22,31 +22,31 @@ body,
 }
 
 body {
-  @apply lg:overflow-auto text-accent-black font-sans;
+  @apply font-sans text-accent-black lg:overflow-auto;
 }
 
 .card {
-  @apply py-3 px-5 bg-white shadow-[5px_5px_0px_0px] shadow-accent-black border-2 border-accent-black flex justify-center items-center;
+  @apply flex items-center justify-center border-2 border-accent-black bg-white py-3 px-5 shadow-[5px_5px_0px_0px] shadow-accent-black;
 }
 
 .card-full {
-  @apply rounded-[100px]
+  @apply rounded-[100px];
 }
 
 .card-icon {
-  @apply w-20 h-20 p-3;
+  @apply h-20 w-20 p-3;
 }
 
 .card-form {
-  @apply rounded-2xl w-full py-4 font-medium outline-none
+  @apply w-full rounded-2xl py-4 font-medium outline-none;
 }
 
 .icon {
-  @apply flex h-[50px] w-[50px] items-center justify-center rounded-[50px] border-2 border-accent-black bg-white
+  @apply flex h-[50px] w-[50px] items-center justify-center rounded-[50px] border-2 border-accent-black bg-white;
 }
 
 .icon img {
-  @apply w-7
+  @apply w-7;
 }
 
 /* Auth */
@@ -61,7 +61,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  @apply  h-full fixed z-10 flex-row flex-nowrap items-center justify-between  overflow-hidden  overflow-y-auto  pt-4 transition-all duration-300 lg:relative lg:m-5 lg:block lg:h-[95vh] lg:w-[8vw] ml-[-99rem] lg:ml-0;
+  @apply fixed z-10 ml-[-99rem] h-full flex-row flex-nowrap items-center  justify-between  overflow-hidden  overflow-y-auto pt-4 transition-all duration-300 lg:relative lg:m-5 lg:ml-0 lg:block lg:h-[95vh] lg:w-[8vw];
 }
 
 .sidebar .text {
@@ -69,11 +69,11 @@ body {
 }
 
 .sidebar .sidebar-heading img {
-  @apply hidden
+  @apply hidden;
 }
 
 .sidebar.active {
-  @apply fixed z-50 block w-[80vw] lg:relative lg:ml-5 lg:w-[350px] ml-0;
+  @apply fixed z-50 ml-0 block w-[80vw] lg:relative lg:ml-5 lg:w-[350px];
 }
 
 .sidebar.active .text {
@@ -81,7 +81,7 @@ body {
 }
 
 .sidebar .sidebar-heading img.active {
-  @apply block
+  @apply block;
 }
 
 .list-sidebar {
@@ -114,7 +114,8 @@ body {
   @apply rounded-md px-10 py-2 transition duration-300 hover:opacity-80 disabled:cursor-not-allowed disabled:bg-cream disabled:text-accent-black disabled:opacity-75;
 }
 
-.kQcYu, .sc-gswNZR {
+.kQcYu,
+.sc-gswNZR {
   @apply !relative;
 }
 
@@ -129,15 +130,15 @@ body.swal2-shown.swal2-height-auto {
 }
 
 .arrow-slider {
-  @apply w-16 h-16 cursor-pointer rounded-full bg-white shadow-md flex items-center justify-center border border-blue-gray-50;
+  @apply flex h-16 w-16 cursor-pointer items-center justify-center rounded-full border border-blue-gray-50 bg-white shadow-md;
 }
 
 .seat {
-  @apply flex h-9 w-10 cursor-pointer items-center justify-center rounded-md border border-gray font-semibold text-accent-gray transition-all select-none
+  @apply flex h-9 w-10 cursor-pointer select-none items-center justify-center rounded-md border border-gray font-semibold text-accent-gray transition-all;
 }
 
 .seat.selected {
-  @apply bg-blue border-blue text-white
+  @apply border-blue bg-blue text-white;
 }
 
 .seat.disabled {

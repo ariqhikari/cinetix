@@ -18,7 +18,7 @@ const Login = () => {
                   htmlFor="email"
                   className="text-gray-900 block text-sm font-medium leading-6"
                 >
-                  Email Address
+                  Alamat Email
                 </label>
                 <div className="mt-2">
                   <input
@@ -38,7 +38,7 @@ const Login = () => {
                     htmlFor="password"
                     className="text-gray-900 block text-sm font-medium leading-6"
                   >
-                    Password
+                    Kata Sandi
                   </label>
                 </div>
                 <div className="mt-2">

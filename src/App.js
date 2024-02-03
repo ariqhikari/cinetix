@@ -19,6 +19,7 @@ import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
 import History from "pages/History";
 import Keluhan from "pages/Keluhan";
+import MovieDetails from "pages/MovieDetails";
 
 const App = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const App = () => {
             <Route path="/jadwal" element={<Schedule />} />
             <Route path="/pemilihan-kursi" element={<ChoosingSeats />} />
             <Route path="/pembayaran" element={<Transaction />} />
+            <Route path="/detail-film" element={<MovieDetails />} />
             <Route
               path="/pembayaran-berhasil"
               element={<TransactionSuccess />}
