@@ -1,138 +1,101 @@
+// components
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import stars from "assets/images/star filled.png";
-import arrowLeft from "assets/images/arrow-kiri.png";
+import Button from "components/Button";
+
+// assets
+import ic_arrow_left from "assets/icons/ic_arrow_left.svg";
+import ic_wallet from "assets/icons/ic_wallet.svg";
 
 const Pembayaran = () => {
   return (
     <>
       <Navbar />
-      <div
-        className="justify-left mb-10 mt-0 flex min-h-screen  items-center"
-        style={{ marginTop: "-10px" }}
-      >
-        <div className="flex w-full flex-col items-center rounded-md bg-white p-8 lg:w-4/5 lg:flex-row lg:items-start">
-          <div className="mb-7 text-center lg:mb-0 lg:w-1/2 lg:text-left">
-            <h1
-              className="mb-10 mt-10 text-4xl font-bold"
-              style={{ marginTop: "10px" }}
-            >
-              Konfirmasi Pembayaran
-            </h1>
+      <div className="mx-20">
+        <h1 className="mb-4 text-3xl font-semibold">KONFIRMASI PEMBAYARAN</h1>
+        <p className="text-gray">
+          Konfirmasi pembayaran dari kursi yang anda pesan
+        </p>
 
-            {/* Detail Jadwal */}
-            <div className="mb-4 mt-20">
-              <h2 className="mb-2 text-lg font-semibold">Detail Jadwal</h2>
-              <p>Judul Film:</p>
-              <span className="text-lg font-semibold">SPIDERMAN SHELBY</span>
-              <hr className="border-blue-gray-400"></hr>
-              <br></br>
-              <p>Tanggal:</p>
-              <span className="font-semibold">SENIN, 23 Oktober 2024</span>
-              <hr className="border-blue-gray-400"></hr>
-              <br></br>
-              <tr>
-                <td>
-                  <p>Kelas:</p>
-                  <span className="font-semibold">GOLD CLASS 2D</span>
-                </td>
+        <div className="mt-20 grid gap-10 lg:grid-cols-2 lg:gap-24">
+          <div>
+            <h2 className="mb-5 text-xl font-medium">Detail Jadwal</h2>
+            <p className="text-dark-blue">Judul Film</p>
+            <span className="text-xl font-medium">SPIDERMAN NO WAY HOME</span>
+            <div className="my-4 h-[1px] bg-blue-gray-100" />
 
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                  <p>Jam:</p>
-                  <span className="font-semibold">14:00</span>
-                </td>
-                {/* <hr className="border-blue-gray-400"></hr> */}
-              </tr>
-              <hr className="border-blue-gray-400"></hr>
-              <br></br>
+            <p className="text-dark-blue">Tanggal</p>
+            <span className="text-xl font-medium">KAMIS, 17 DESEMBER 2021</span>
+            <div className="my-4 h-[1px] bg-blue-gray-100" />
 
-              <div className="mt-2">
-                <p>
-                  Tiket <span className="">(3)</span>
-                </p>
-                <span className="font-semibold">C8, C9, C10</span>
-                <hr className="border-blue-gray-400"></hr>
+            <div className="grid grid-cols-2">
+              <div>
+                <p className="text-dark-blue">Kelas</p>
+                <span className="text-xl font-medium">REGULAR 2D</span>
               </div>
-              <div></div>
+              <div>
+                <p className="text-dark-blue">Jam</p>
+                <span className="text-xl font-medium">14:40</span>
+              </div>
             </div>
-            <div className="ml justify-left mt-12 flex">
-              <img src={arrowLeft} />
-              <button className="text-blue-500 ml-8 underline">Kembali</button>
+            <div className="my-4 h-[1px] bg-blue-gray-100" />
+
+            <p className="text-dark-blue">Tiket (3)</p>
+            <span className="text-xl font-medium">C8, C9, C10</span>
+            <div className="mt-4 mb-10 h-[1px] bg-blue-gray-100" />
+
+            <div className="flex cursor-pointer gap-4 text-xl font-semibold text-gray">
+              <img src={ic_arrow_left} alt="Icon Arrow Left" />
+              Kembali
             </div>
           </div>
 
-          {/* Ringkasan Order */}
-          <div
-            className="mt-20 lg:ml-auto lg:w-1/2 lg:pl-8"
-            style={{ marginTop: "130px" }}
-          >
-            <h2 className="mb-2 text-lg font-semibold">Ringkasan Order</h2>
-            <h2 className="mb-0 text-lg font-semibold">Detail Transaksi</h2>
-            <div className="mb-2 flex justify-between">
-              <p>Regular seat</p>
-              <p className="ml-80 ">Rp 70.000</p>
-              <p className="text-grey-tulisan">x3</p>
+          <div className="rounded-xl border border-[#C4C4C4] px-6 py-5 shadow">
+            <h2 className="mb-5 text-xl font-medium">Ringkasan Order</h2>
+            <h4 className="mb-3 font-semibold">Detail Transaksi</h4>
+            <div className="mb-1 flex justify-between">
+              <span>REGULAR SEAT</span>
+              <div className="flex items-center gap-3">
+                Rp. 50.000
+                <span className="font-semibold text-dark-blue">X3</span>
+              </div>
             </div>
-            <div className="mb-2 flex justify-between">
-              <p>Biaya Layanan</p>
 
-              <p className="ml-80">Rp 3.000</p>
-              <p className="text-grey-tulisan">x3</p>
-            </div>
-            <br></br>
-            <hr className="border-blue-gray-400"></hr>
-            <br></br>
-            <div className="mb-2 text-lg font-semibold">
-              <p>Promo & Voucher</p>
-            </div>
             <div className="flex justify-between">
-              <p>VOUCHER CinéTix</p>
-              <p>- Rp. 70.000</p>
-            </div>
-            <br></br>
-            <hr className="border-blue-gray-400"></hr>
-            <div className="mb-2  pt-2">
-              <div className="flex justify-between font-semibold">
-                <p>Total Bayar</p>
-                <p>Rp 70.000</p>
-              </div>
-              <br></br>
-              <hr className="border-blue-gray-400"></hr>
-              <br></br>
-            </div>
-
-            {/* Metode Pembayaran */}
-            <div className="mb-4 ">
-              <h2 className="mb-2 text-lg font-semibold">Metode Pembayaran</h2>
-              <div className="flex">
-                <img src={stars} />
-                <p className="ml-3 font-semibold">E-Wallet</p>
-              </div>
-              <hr className="border-blue-gray-400"></hr>
-              <div className="mt-10">
-                <a className="text-grey-tulisan">
-                  *Pembelian tiket tidak bisa dibatalkan{" "}
-                </a>
+              <span>BIAYA LAYANAN</span>
+              <div className="flex items-center gap-3">
+                Rp.3.000
+                <span className="font-semibold text-dark-blue">X3</span>
               </div>
             </div>
 
-            {/* Button Beli Tiket */}
-            <div className="flex justify-center">
-              <button className="bg-greybutton rounded-lg px-4 py-2 text-white">
-                Beli Tiket
-              </button>
+            <div className="my-4 h-[1px] bg-blue-gray-100" />
+
+            <div className="flex justify-between font-semibold">
+              <h4>Total Bayar</h4>
+              <h4>Rp. 89.000</h4>
             </div>
+
+            <div className="my-4 h-[1px] bg-blue-gray-100" />
+
+            <h4 className="mb-3 font-semibold">Metode Pembayaran</h4>
+            <div className="mb-8 flex gap-3">
+              <img src={ic_wallet} alt="Icon Wallet" />
+              E-Wallet
+            </div>
+
+            <p className="mb-4 text-sm text-red">
+              *Pembelian tiket tidak dapat dibatalkan
+            </p>
+
+            <Button isPrimary isBlock>
+              BELI TIKET
+            </Button>
           </div>
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+
+      <Footer />
     </>
   );
 };

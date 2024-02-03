@@ -13,7 +13,7 @@ const Footer = () => {
           <img src={CinéTix} alt="Company Logo" className="h-12" />
         </div>
 
-        {/* Menu kontak, tentang, partner */}
+        {/* Menu perusahaan, kontak, tentang, partner */}
         <div className="mb-4">
           <h4 className="mb-2 text-lg font-semibold">Perusahaan</h4>
           <ul className="list-none space-y-4">

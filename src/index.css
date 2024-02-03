@@ -176,3 +176,7 @@ body.swal2-shown.swal2-height-auto {
 .time.disabled {
   @apply cursor-not-allowed border-[#DADFE8] bg-[#DADFE8] text-[#9DA8BE];
 }
+
+.seat.disabled {
+  @apply border-dark-blue bg-dark-blue text-white;
+}

@@ -3,6 +3,7 @@ import ic_star from "assets/icons/ic_star.png";
 import ic_star_rating from "assets/icons/ic_star_rating.png";
 import thumbnail from "assets/images/thumbnail.png";
 import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 
 const MovieDetails = () => {
   return (
@@ -218,6 +219,7 @@ const MovieDetails = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   );
 };
