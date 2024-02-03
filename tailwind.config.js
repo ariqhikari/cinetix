@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme")
-const withMT = require("@material-tailwind/react/utils/withMT")
+const defaultTheme = require("tailwindcss/defaultTheme");
+const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
   content: [
@@ -27,10 +27,12 @@ module.exports = withMT({
         "light-red": "#EA433533",
         green: "#17FF8F",
         gray: "#5A637A",
+        graylagi: "#BDC5D4",
         blue: "#118EEA",
+        sidebar: "#F5F5F5",
         "dark-blue": "#1A2C50",
       },
     },
   },
   plugins: [],
-})
+});
