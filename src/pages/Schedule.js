@@ -27,13 +27,13 @@ const Schedule = () => {
   return (
     <>
       <Navbar />
-      <div className="mx-20">
+      <div className="mx-5 lg:mx-20">
         <h1 className="mb-4 text-3xl font-semibold">JADWAL</h1>
         <p className="text-gray">Pilih jadwal bioskop yang akan kamu tonton</p>
 
-        <div className="grid grid-cols-[2fr_1fr] gap-24">
+        <div className="grid gap-10 lg:grid-cols-[2fr_1fr] lg:gap-24">
           <div>
-            <div className="relative mt-8 flex w-[500px] items-center gap-5">
+            <div className="relative mt-8 flex w-[90vw] items-center gap-5 lg:w-[500px]">
               <div onClick={handlePrev} className="cursor-pointer">
                 <svg
                   width="10"
@@ -51,7 +51,15 @@ const Schedule = () => {
                   />
                 </svg>
               </div>
-              <Swiper ref={sliderRef} slidesPerView={5}>
+              <Swiper
+                ref={sliderRef}
+                slidesPerView={2}
+                breakpoints={{
+                  576: {
+                    slidesPerView: 5,
+                  },
+                }}
+              >
                 <SwiperSlide>
                   <div className="date">
                     <span className="text-center font-medium">

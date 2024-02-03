@@ -1,4 +1,4 @@
-import Background from "assets/images/Background.png";
+import Button from "components/Button";
 
 const Login = () => {
   return (
@@ -6,13 +6,8 @@ const Login = () => {
       <div className="flex min-h-screen items-center justify-center bg-[url('assets/images/Background.png')] bg-cover">
         <div className="border-gray-300 w-full max-w-md rounded-md bg-white p-8 shadow-md">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <div className="flex justify-center">
-              <div className="mr-2 text-4xl font-bold text-black">Ciné</div>
-              <div className="text-4xl font-bold text-yellow-500">Tix</div>
-            </div>
-
-            <h2 className="text-gray-900 my-5 text-center text-2xl font-bold leading-6 tracking-tight">
-              Sign in to your account
+            <h2 className="text-center text-2xl font-bold leading-6 tracking-tight">
+              Masuk ke CinéTix
             </h2>
           </div>
 
@@ -23,7 +18,7 @@ const Login = () => {
                   htmlFor="email"
                   className="text-gray-900 block text-sm font-medium leading-6"
                 >
-                  Email address
+                  Email Address
                 </label>
                 <div className="mt-2">
                   <input
@@ -59,12 +54,9 @@ const Login = () => {
               </div>
 
               <div>
-                <button
-                  type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Masuk
-                </button>
+                <Button isPrimary isBlock>
+                  Masuk Sekarang
+                </Button>
               </div>
               <div>
                 <p className="text-gray-500 mt-7 text-center text-sm">
@@ -72,12 +64,9 @@ const Login = () => {
                 </p>
               </div>
               <div>
-                <button
-                  type="submit"
-                  className="border-gray-300 flex w-full justify-center rounded-md border-2 bg-white px-3 py-1.5 text-sm font-semibold leading-6 text-indigo-600 shadow-md hover:bg-indigo-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Daftar
-                </button>
+                <Button isSecondary isBlock>
+                  Daftar Sekarang
+                </Button>
               </div>
             </form>
           </div>

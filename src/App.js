@@ -14,6 +14,7 @@ import Home from "pages/Home";
 import Login from "pages/Login";
 import ListFilm from "pages/ListFilm";
 import Schedule from "pages/Schedule";
+import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
 import History from "pages/History";
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/list-film" element={<ListFilm />} />
             <Route path="/jadwal" element={<Schedule />} />
+            <Route path="/pemilihan-kursi" element={<ChoosingSeats />} />
             <Route path="/pembayaran" element={<Transaction />} />
             <Route
               path="/pembayaran-berhasil"
