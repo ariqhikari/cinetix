@@ -47,12 +47,12 @@ const Histori = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
             <div className="">
-              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-greybutton px-4 py-2 text-white">
+              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-gray px-4 py-2 text-white">
                 Berhasil
               </button>
             </div>
@@ -73,12 +73,12 @@ const Histori = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
             <div className="">
-              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-greybutton px-4 py-2 text-white">
+              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-gray px-4 py-2 text-white">
                 Berhasil
               </button>
             </div>
@@ -99,12 +99,12 @@ const Histori = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
             <div className="">
-              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-greybutton px-4 py-2 text-white">
+              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-gray px-4 py-2 text-white">
                 Berhasil
               </button>
             </div>
@@ -125,12 +125,12 @@ const Histori = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
             <div className="">
-              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-greybutton px-4 py-2 text-white">
+              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-gray px-4 py-2 text-white">
                 Berhasil
               </button>
             </div>
@@ -151,12 +151,12 @@ const Histori = () => {
               </h2>
               <div className="mt-1 ml-10 flex">
                 <img src={lokasi} />
-                <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
+                <h1 className="text-grey-tulisan ml-3">CinéTix</h1>
                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>{" "}
               </div>
             </div>
             <div className="">
-              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-greybutton px-4 py-2 text-white">
+              <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-gray px-4 py-2 text-white">
                 Berhasil
               </button>
             </div>
@@ -171,35 +171,3 @@ const Histori = () => {
   )
 }
 export default Histori
-
-// <div className="mt-10">
-//   <div className="justify-left mt-5 flex w-full gap-5">
-//     <div class="h-60 w-60 rounded bg-blue-gray-200"></div>
-//   </div>
-// </div>
-//  ///// //// // //// /// //// //// //
-// {/* <div className="flex justify-between ">
-//             {/* kiri */}
-//             <div className="justify-left mt-10 mt-5 flex  gap-5">
-//               <div class="h-60 w-60 rounded bg-blue-gray-200"></div>
-//             </div>
-//             {/* kanan */}
-//             <div className="ml-10 justify-center">
-//               <div className=" flex justify-between">
-//                 <h2 className="text-s mt-10  bg-white text-center font-bold">
-//                   Spiderman:No Way Home
-//                 </h2>
-//                 <button className="border-blue-500 ml-80 mt-10 rounded-lg border bg-greybutton px-4 py-2 text-white">
-//                   Berhasil
-//                 </button>
-//               </div>
-//               <h2 className="text-s mt-0  font-bold">
-//                 Kamis, 16 Desember 2024, 14: 00{" "}
-//               </h2>
-//               <div className="flex">
-//                 <img src={lokasi} />
-//                 <h1 className="ml-3 text-grey-tulisan">CinéTix</h1>
-//                 <h1 className="ml-3 font-bold">(Regular 2D)</h1>
-//               </div>
-//             </div>
-//           </div> */}

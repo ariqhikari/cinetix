@@ -1,33 +1,34 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { PageTransition } from "@steveeeie/react-page-transition";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
+import { PageTransition } from "@steveeeie/react-page-transition"
 
 // layouts
-import Default from "layouts/Default";
-import Admin from "layouts/Admin";
-import ScrollToTop from "components/ScrollToTop";
+import Default from "layouts/Default"
+import Admin from "layouts/Admin"
+import ScrollToTop from "components/ScrollToTop"
 
 // middleware
-import AuthorizeUser from "middleware/Auth";
+import AuthorizeUser from "middleware/Auth"
 
 // pages
-import Home from "pages/Home";
-import Login from "pages/Login";
-import ListFilm from "pages/ListFilm";
-import Schedule from "pages/Schedule";
-import ChoosingSeats from "pages/ChoosingSeats";
-import Transaction from "pages/Transaction";
-import TransactionSuccess from "pages/TransactionSucces";
-import History from "pages/History";
+import Home from "pages/Home"
+import Login from "pages/Login"
+import ListFilm from "pages/ListFilm"
+import Schedule from "pages/Schedule"
+import ChoosingSeats from "pages/ChoosingSeats"
+import Transaction from "pages/Transaction"
+import TransactionSuccess from "pages/TransactionSucces"
+import History from "pages/History"
+import Histori from "pages/ActiveTicket"
 
 const App = () => {
-  const location = useLocation();
+  const location = useLocation()
 
   const transitionPage = () => {
     return !location.pathname.includes("customer") &&
       !location.pathname.includes("admin")
       ? location.pathname
-      : "";
-  };
+      : ""
+  }
 
   return (
     <>
@@ -46,6 +47,7 @@ const App = () => {
               element={<TransactionSuccess />}
             />
             <Route path="/histori" element={<History />} />
+            <Route path="/tiket-aktif" element={<Histori />} />
           </Route>
 
           {/* Not Found */}
@@ -53,7 +55,7 @@ const App = () => {
         </Routes>
       </PageTransition>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
