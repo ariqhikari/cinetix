@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 // assets
 import CinéTix from "assets/images/CinéTix.png";
 import profile from "assets/images/profile.png";
+import Review from "pages/Review";
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-
   return (
     <header className="mx-5 mt-5 mb-10 flex items-center justify-between lg:mx-20">
       <div className="flex items-center">
