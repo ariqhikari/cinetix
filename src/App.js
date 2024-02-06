@@ -17,7 +17,8 @@ import Schedule from "pages/Schedule";
 import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
-import History from "pages/History";
+import MyTickets from "pages/MyTickets";
+import HistoryTransactions from "pages/HistoryTransactions";
 
 const App = () => {
   const location = useLocation();
@@ -32,7 +33,10 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
-      <PageTransition>
+      <PageTransition
+        preset="fadeLeftFadeRight"
+        transitionKey={transitionPage()}
+      >
         <Routes location={location}>
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
@@ -45,7 +49,11 @@ const App = () => {
               path="/pembayaran-berhasil"
               element={<TransactionSuccess />}
             />
-            <Route path="/histori" element={<History />} />
+            <Route path="/tiket-saya" element={<MyTickets />} />
+            <Route
+              path="/riwayat-transaksi"
+              element={<HistoryTransactions />}
+            />
           </Route>
 
           {/* Not Found */}

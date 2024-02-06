@@ -160,7 +160,7 @@ const Schedule = () => {
               </div>
             </div>
 
-            <div className="my-5 h-[1px] bg-blue-gray-100" />
+            <div className="divider" />
 
             <div className="flex gap-3">
               <img src={ic_location} alt="Icon Location" />
@@ -243,7 +243,7 @@ const Schedule = () => {
               </tr>
             </table>
 
-            <div className="my-5 h-[1px] bg-blue-gray-100" />
+            <div className="divider" />
 
             <div className="flex gap-3">
               <img src={ic_star} alt="Icon Star" />
@@ -253,7 +253,7 @@ const Schedule = () => {
               <img src={ic_star} alt="Icon Star" />
             </div>
 
-            <div className="my-5 h-[1px] bg-blue-gray-100" />
+            <div className="divider" />
 
             <div className="rounded-xl border border-gray p-4">
               <h4 className="mb-4 text-2xl font-semibold">UNIKOM XXI</h4>

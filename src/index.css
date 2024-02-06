@@ -180,3 +180,7 @@ body.swal2-shown.swal2-height-auto {
 .seat.disabled {
   @apply bg-dark-blue border-dark-blue text-white
 }
+
+.divider {
+  @apply my-5 h-[1px] bg-blue-gray-100
+}

@@ -2,16 +2,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useCallback, useRef } from "react";
 
 // components
-import Navbar from "components/Navbar"
-import Footer from "components/Footer"
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 
 // assets
-import thumbnail from "assets/images/thumbnail.png"
-import banner from "assets/images/banner.png"
-
-import "swiper/css";
-
-import "swiper/css";
+import thumbnail from "assets/images/thumbnail.png";
+import banner from "assets/images/banner.png";
 
 import "swiper/css";
 
@@ -205,7 +201,7 @@ const Home = () => {
 
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
