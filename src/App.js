@@ -10,15 +10,15 @@ import ScrollToTop from "components/ScrollToTop"
 import AuthorizeUser from "middleware/Auth"
 
 // pages
-import Home from "pages/Home"
-import Login from "pages/Login"
-import ListFilm from "pages/ListFilm"
-import Schedule from "pages/Schedule"
-import ChoosingSeats from "pages/ChoosingSeats"
-import Transaction from "pages/Transaction"
-import TransactionSuccess from "pages/TransactionSucces"
-import History from "pages/History"
-import Histori from "pages/ActiveTicket"
+import Home from "pages/Home";
+import Login from "pages/Login";
+import ListFilm from "pages/ListFilm";
+import Schedule from "pages/Schedule";
+import ChoosingSeats from "pages/ChoosingSeats";
+import Transaction from "pages/Transaction";
+import TransactionSuccess from "pages/TransactionSucces";
+import MyTickets from "pages/MyTickets";
+import HistoryTransactions from "pages/HistoryTransactions";
 
 const App = () => {
   const location = useLocation()
@@ -33,7 +33,10 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
-      <PageTransition>
+      <PageTransition
+        preset="fadeLeftFadeRight"
+        transitionKey={transitionPage()}
+      >
         <Routes location={location}>
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
@@ -46,8 +49,11 @@ const App = () => {
               path="/pembayaran-berhasil"
               element={<TransactionSuccess />}
             />
-            <Route path="/histori" element={<History />} />
-            <Route path="/tiket-aktif" element={<Histori />} />
+            <Route path="/tiket-saya" element={<MyTickets />} />
+            <Route
+              path="/riwayat-transaksi"
+              element={<HistoryTransactions />}
+            />
           </Route>
 
           {/* Not Found */}
