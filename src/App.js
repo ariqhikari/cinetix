@@ -26,6 +26,13 @@ import EditMovie from "pages/EditMovie";
 import AddSchedule from "pages/AddSchedule";
 import EditSchedule from "pages/EditSchedule";
 
+// navbar, sidebar, footer
+import Navbar from "components/Navbar";
+import UserSidebar from "components/UserSidebar";
+import AdminSidebar from "components/AdminSidebar";
+import Footer from "components/Footer";
+import AdminFilmList from "pages/AdminFilmList";
+
 const App = () => {
   const location = useLocation();
 
@@ -54,10 +61,15 @@ const App = () => {
             <Route path="/detail-transaksi" element={<TransactionDetail/>}/>
             <Route path="/histori" element={<History />} />
             <Route path="/review" element={<Review />} />
+            <Route path="/admin-list-film" element={<AdminFilmList />} />
             <Route path="/add-movie" element={<AddMovie />} />
             <Route path="/edit-movie" element={<EditMovie />} />
             <Route path="/add-schedule" element={<AddSchedule />} />
             <Route path="/edit-schedule" element={<EditSchedule />} />
+            <Route path="/navbar" element={<Navbar />} />
+            <Route path="/user-sidebar" element={<UserSidebar />} />
+            <Route path="/admin-sidebar" element={<AdminSidebar />} />
+            <Route path="/footer" element={<Footer />} />
           </Route>
 
           {/* Not Found */}
