@@ -1,13 +1,13 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom"
-import { PageTransition } from "@steveeeie/react-page-transition"
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { PageTransition } from "@steveeeie/react-page-transition";
 
 // layouts
-import Default from "layouts/Default"
-import Admin from "layouts/Admin"
-import ScrollToTop from "components/ScrollToTop"
+import Default from "layouts/Default";
+import Admin from "layouts/Admin";
+import ScrollToTop from "components/ScrollToTop";
 
 // middleware
-import AuthorizeUser from "middleware/Auth"
+import AuthorizeUser from "middleware/Auth";
 
 // pages
 import Home from "pages/Home";
@@ -21,14 +21,14 @@ import MyTickets from "pages/MyTickets";
 import HistoryTransactions from "pages/HistoryTransactions";
 
 const App = () => {
-  const location = useLocation()
+  const location = useLocation();
 
   const transitionPage = () => {
     return !location.pathname.includes("customer") &&
       !location.pathname.includes("admin")
       ? location.pathname
-      : ""
-  }
+      : "";
+  };
 
   return (
     <>
@@ -61,7 +61,7 @@ const App = () => {
         </Routes>
       </PageTransition>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
