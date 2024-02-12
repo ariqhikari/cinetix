@@ -18,7 +18,7 @@ const SidebarCustomer = () => {
               />
             </svg>
 
-            <span>TIKET AKTIF</span>
+            <span>Tiket Aktif</span>
           </a>
         </li>
 
@@ -80,7 +80,7 @@ const SidebarCustomer = () => {
               />
             </svg>
 
-            <span>RIWAYAT TRANSAKSI</span>
+            <span>Riwayat Transaksi</span>
           </a>
         </li>
 

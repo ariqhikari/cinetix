@@ -3,15 +3,15 @@ import { Outlet } from "react-router-dom";
 // components
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import SidebarAdmin from "components/SidebarAdmin";
+import SidebarCustomer from "components/SidebarCustomer";
 
-const Admin = () => {
+const Customer = () => {
   return (
     <>
       <Navbar />
       <div className="flex gap-5">
         <div className="w-[20%]">
-          <SidebarAdmin />
+          <SidebarCustomer />
         </div>
 
         <div className="w-full px-10">
@@ -23,4 +23,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Customer;

@@ -4,6 +4,7 @@ import { PageTransition } from "@steveeeie/react-page-transition";
 // layouts
 import Default from "layouts/Default";
 import Admin from "layouts/Admin";
+import Customer from "layouts/Customer";
 import ScrollToTop from "components/ScrollToTop";
 
 // middleware
@@ -17,8 +18,13 @@ import Schedule from "pages/Schedule";
 import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
-import MyTickets from "pages/MyTickets";
-import HistoryTransactions from "pages/HistoryTransactions";
+
+// customer
+import CustomerActiveTickets from "pages/Customer/ActiveTickets";
+import CustomerHistoryTransactions from "pages/Customer/HistoryTransactions";
+
+// admin
+import AdminDashboard from "pages/Admin/Dashboard";
 
 const App = () => {
   const location = useLocation();
@@ -42,18 +48,43 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/list-film" element={<ListFilm />} />
-            <Route path="/jadwal" element={<Schedule />} />
+            <Route path="/jl" adwa element={<Schedule />} />
             <Route path="/pemilihan-kursi" element={<ChoosingSeats />} />
             <Route path="/pembayaran" element={<Transaction />} />
             <Route
               path="/pembayaran-berhasil"
               element={<TransactionSuccess />}
             />
-            <Route path="/tiket-saya" element={<MyTickets />} />
+          </Route>
+
+          {/* Customer */}
+          <Route
+            path="/customer"
+            element={
+              // <AuthorizeUser>
+              <Customer />
+              // </AuthorizeUser>
+            }
+          >
+            <Route path="" element={<Navigate to="tiket-aktif" replace />} />
+            <Route path="tiket-aktif" element={<CustomerActiveTickets />} />
             <Route
-              path="/riwayat-transaksi"
-              element={<HistoryTransactions />}
+              path="riwayat-transaksi"
+              element={<CustomerHistoryTransactions />}
             />
+          </Route>
+
+          {/* Admin */}
+          <Route
+            path="/admin"
+            element={
+              // <AuthorizeUser>
+              <Admin />
+              // </AuthorizeUser>
+            }
+          >
+            <Route path="" element={<Navigate to="dashboard" replace />} />
+            <Route path="dashboard" element={<AdminDashboard />} />
           </Route>
 
           {/* Not Found */}
