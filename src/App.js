@@ -1,40 +1,41 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { PageTransition } from "@steveeeie/react-page-transition";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom"
+import { PageTransition } from "@steveeeie/react-page-transition"
 
 // layouts
-import Default from "layouts/Default";
-import Admin from "layouts/Admin";
-import Customer from "layouts/Customer";
-import ScrollToTop from "components/ScrollToTop";
+import Default from "layouts/Default"
+import Admin from "layouts/Admin"
+import Customer from "layouts/Customer"
+import ScrollToTop from "components/ScrollToTop"
 
 // middleware
-import AuthorizeUser from "middleware/Auth";
+import AuthorizeUser from "middleware/Auth"
 
 // pages
-import Home from "pages/Home";
-import Login from "pages/Login";
-import ListFilm from "pages/ListFilm";
-import Schedule from "pages/Schedule";
-import ChoosingSeats from "pages/ChoosingSeats";
-import Transaction from "pages/Transaction";
-import TransactionSuccess from "pages/TransactionSucces";
+import Home from "pages/Home"
+import Login from "pages/Login"
+import ListFilm from "pages/ListFilm"
+import Schedule from "pages/Schedule"
+import ChoosingSeats from "pages/ChoosingSeats"
+import Transaction from "pages/Transaction"
+import TransactionSuccess from "pages/TransactionSucces"
 
 // customer
-import CustomerActiveTickets from "pages/Customer/ActiveTickets";
-import CustomerHistoryTransactions from "pages/Customer/HistoryTransactions";
+import CustomerActiveTickets from "pages/Customer/ActiveTickets"
+import CustomerHistoryTransactions from "pages/Customer/HistoryTransactions"
 
 // admin
-import AdminDashboard from "pages/Admin/Dashboard";
+import AdminDashboard from "pages/Admin/Dashboard"
+import ListFilmAdmin from "pages/Admin/FilmList"
 
 const App = () => {
-  const location = useLocation();
+  const location = useLocation()
 
   const transitionPage = () => {
     return !location.pathname.includes("customer") &&
       !location.pathname.includes("admin")
       ? location.pathname
-      : "";
-  };
+      : ""
+  }
 
   return (
     <>
@@ -85,6 +86,7 @@ const App = () => {
           >
             <Route path="" element={<Navigate to="dashboard" replace />} />
             <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="list-film" element={<ListFilmAdmin />} />
           </Route>
 
           {/* Not Found */}
@@ -92,7 +94,7 @@ const App = () => {
         </Routes>
       </PageTransition>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
