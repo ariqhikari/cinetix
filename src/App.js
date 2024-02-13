@@ -25,6 +25,7 @@ import CustomerHistoryTransactions from "pages/Customer/HistoryTransactions";
 
 // admin
 import AdminDashboard from "pages/Admin/Dashboard";
+import DetailMovie from "pages/Admin/DetailMovie";
 
 const App = () => {
   const location = useLocation();
@@ -85,6 +86,7 @@ const App = () => {
           >
             <Route path="" element={<Navigate to="dashboard" replace />} />
             <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="detail-film" element={<DetailMovie />} />
           </Route>
 
           {/* Not Found */}
