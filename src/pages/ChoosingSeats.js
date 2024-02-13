@@ -81,21 +81,6 @@ const ChoosingSeats = () => {
           <div className="flex items-center gap-4">
             <img src={ic_time} alt="Icon Time" />
             <span className="text-2xl font-medium text-dark-blue">14:40</span>
-            <svg
-              width="17"
-              height="10"
-              viewBox="0 0 17 10"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16 1L8.5 8.5L1 0.999999"
-                stroke="#1A2C50"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
           </div>
 
           <div className="flex gap-5">

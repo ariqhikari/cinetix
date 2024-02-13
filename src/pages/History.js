@@ -19,8 +19,8 @@ const History = () => {
           <hr className="border-blue-gray-400"></hr>
           <br></br>
           <div className="justify-left flex">
-            <img src={dftrtrnsksi} />
-            <button className="text-blue-500 ml-7 ">DAFTAR TRANSAKSI</button>
+            <img src={dftrtrnsksi} className="h-[30px]" />
+            <button className="text-blue-500 ml-5 ">DAFTAR TRANSAKSI</button>
           </div>
         </div>
         {/* Kanan */}

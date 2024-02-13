@@ -6,8 +6,7 @@ import youtube from "assets/images/youtube.png";
 
 const Footer = () => {
   return (
-    <>
-      <footer className="bg-gray-800 text-black p-8">
+    <footer className="bg-gray-800 mt-16 border-t-2 border-blue-gray-50 p-8 text-black">
       <div className="container mx-auto flex flex-wrap justify-between">
         {/* Logo perusahaan */}
         <div className="mb-4">
@@ -16,7 +15,7 @@ const Footer = () => {
 
         {/* Menu perusahaan, kontak, tentang, partner */}
         <div className="mb-4">
-          <h4 className="text-lg font-semibold mb-2">Perusahaan</h4>
+          <h4 className="mb-2 text-lg font-semibold">Perusahaan</h4>
           <ul className="list-none space-y-4">
             <li>
               <a href="#">Kontak Kami</a>
@@ -32,7 +31,7 @@ const Footer = () => {
 
         {/* Menu beranda, bioskop, tiket saya, pembayaran */}
         <div className="mb-4">
-          <h4 className="text-lg font-semibold mb-2">Menu</h4>
+          <h4 className="mb-2 text-lg font-semibold">Menu</h4>
           <ul className="list-none space-y-4">
             <li>
               <a href="#">Beranda</a>
@@ -49,11 +48,15 @@ const Footer = () => {
           </ul>
         </div>
 
-         {/* Menu follow media sosial */}
-         <div className="mb-4">
-          <h4 className="text-lg font-semibold mb-2">Follow Social Media</h4>
+        {/* Menu follow media sosial */}
+        <div className="mb-4">
+          <h4 className="mb-2 text-lg font-semibold">Follow Social Media</h4>
           <div className="flex items-center justify-center space-x-6">
-            <a href="link-to-instagram" target="_blank" rel="noopener noreferrer">
+            <a
+              href="link-to-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={instagram} alt="Instagram" className="h-6" />
             </a>
             <a href="link-to-github" target="_blank" rel="noopener noreferrer">
@@ -66,7 +69,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-    </>
   );
 };
 

@@ -1,326 +1,280 @@
-import ic_location from "assets/icons/ic_location.png";
-import ic_star from "assets/icons/ic_star.png";
-import ic_star_rating from "assets/icons/ic_star_rating.png";
-import thumbnail from "assets/images/thumbnail.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useCallback, useRef } from "react";
+
+// components
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import Button from "components/Button";
+
+// assets
+import ic_location from "assets/icons/ic_location.svg";
+import ic_star from "assets/icons/ic_star.svg";
+import thumbnail from "assets/images/thumbnail.png";
 
 const Schedule = () => {
+  const sliderRef = useRef(null);
+
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
   return (
     <>
       <Navbar />
-      <div className="relative mx-2 flex min-h-screen flex-col p-1">
-        <form className="space-y-4" action="#" method="POST">
-          <div className="flex h-[50px] grow-0 items-center p-4 text-2xl font-semibold">
-            Jadwal
-          </div>
-          <div class="justfy-center relative mt-2 flex h-[800px] flex-row gap-20 px-4">
-            {/* Sisi kiri */}
-            <div class="mr-10 flex basis-3/5 flex-col">
-              {/* Pilih tanggal Dinamis*/}
-              <div className="relative m-2 flex h-[100px] grow-0 flex-row items-center justify-center p-3">
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300 ">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-                <div class=" border-1 mx-2 flex flex-col items-center justify-center rounded-lg border bg-blue-gray-100 p-3 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                  <p class="text-gray-500 font-['Roboto'] text-lg font-semibold">
-                    21 Oct
-                  </p>
-                  <p class="text-gray-500 font-['Roboto'] text-xl font-black">
-                    SEN
-                  </p>
-                </div>
-              </div>
+      <div className="mx-5 lg:mx-20">
+        <h1 className="mb-4 text-3xl font-semibold">JADWAL</h1>
+        <p className="text-gray">Pilih jadwal bioskop yang akan kamu tonton</p>
 
-              {/* Tulisan BANDUNG */}
-              <div>
-                <hr className="border-blue-gray-400"></hr>
-                <div className="relative m-2 flex items-center">
-                  <div class="relative ml-2 inline-flex items-start">
-                    <img
-                      src={ic_location}
-                      alt="location"
-                      className="mt-1 h-5"
-                    />
-                    <p className="ml-1 font-['Roboto'] text-xl font-light text-black">
-                      BANDUNG
-                    </p>
-                  </div>
-                </div>
-                <hr className="border-blue-gray-400"></hr>
+        <div className="grid gap-10 lg:grid-cols-[2fr_1fr] lg:gap-24">
+          <div>
+            <div className="relative mt-8 flex w-[90vw] items-center gap-5 lg:w-[500px]">
+              <div onClick={handlePrev} className="cursor-pointer">
+                <svg
+                  width="10"
+                  height="18"
+                  viewBox="0 0 10 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 1.5L1.5 9L9 16.5"
+                    stroke="#333333"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
-
-              {/* Nama Bioskop static*/}
-              <div className="relative mx-2 mt-4 flex h-[80px] flex-col p-2">
-                <div className="ml-2 inline-flex">
-                  <img src={ic_star} alt="star Logo" className="mt-1 h-6" />
-                  <p class="ml-1 font-['Roboto'] text-2xl font-medium text-black">
-                    UNIKOM XXI
-                  </p>
-                </div>
-                <div class="text-zinc-800 ml-2 w-[426px] font-['Roboto'] text-base font-normal">
-                  Jl. DIPATIUKUR NO.112 - 116
-                </div>
-              </div>
-
-              {/* Pilih Jam buat Reguler Dinamis*/}
-              <div className="relative mx-2 flex h-[220px] flex-col px-2">
-                <div className="mx-2 inline-flex justify-between">
-                  <p class="font-['Roboto'] text-2xl font-bold text-blue-gray-700">
-                    REGULAR 2D
-                  </p>
-                  <div class="text-right font-['Roboto'] text-lg font-normal text-blue-gray-700">
-                    Rp. 45.000 - Rp. 50.000
+              <Swiper
+                ref={sliderRef}
+                slidesPerView={2}
+                breakpoints={{
+                  576: {
+                    slidesPerView: 5,
+                  },
+                }}
+              >
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                </div>
-                {/* Pilihan Jam */}
-                <div className="relative flex w-[350px] grow-0 flex-row flex-wrap py-2">
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="date">
+                    <span className="text-center font-medium">
+                      15 Des
+                      <span className="day block font-semibold">RAB</span>
+                    </span>
                   </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Pilih Jam buat GOLD Dinamis*/}
-              <div className="relative mx-2 flex h-[220px] flex-col px-2">
-                <div className="mx-2 inline-flex justify-between">
-                  <p class="font-['Roboto'] text-2xl font-bold text-blue-gray-700">
-                    GOLD CLASS 2D
-                  </p>
-                  <div class="text-right font-['Roboto'] text-lg font-normal text-blue-gray-700">
-                    Rp. 70.000
-                  </div>
-                </div>
-                <div className="relative flex w-[350px] grow-0 flex-row flex-wrap py-2">
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                  <div class="border-1 m-1 flex h-10 w-[70px] items-center justify-center gap-2.5 rounded border bg-blue-gray-100 hover:bg-blue-gray-200 active:bg-blue-gray-300">
-                    <p class="font-['Roboto'] text-sm font-bold">14:40</p>
-                  </div>
-                </div>
+                </SwiperSlide>
+              </Swiper>
+              <div onClick={handleNext} className="cursor-pointer">
+                <svg
+                  width="10"
+                  height="17"
+                  viewBox="0 0 10 17"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 16L8.5 8.5L1 1"
+                    stroke="#333333"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </div>
             </div>
 
-            {/* Sisi kanan */}
-            <div class="flex flex-col">
-              {/* Foto Film Harus Dinamis */}
-              <div className="m-2 flex justify-center">
-                <img
-                  src={thumbnail}
-                  alt="thumbnail"
-                  className="h-[214px] w-[413px] rounded-2xl object-contain"
-                />
-              </div>
+            <div className="divider" />
 
-              {/* Detail Film yang dipesan Dinamis */}
-              <div className="relative mx-2 my-1 flex flex-col px-2">
-                {/* Nama Film */}
-                <div class="relative">
-                  <p class="font-['Roboto'] text-2xl font-medium">
-                    SPIDERMAN : NO WAY HOME
-                  </p>
-                </div>
+            <div className="flex gap-3">
+              <img src={ic_location} alt="Icon Location" />
+              <span className="text-lg">Bandung</span>
+            </div>
 
-                {/* Detail Film */}
-                <div className="my-1 flex flex-row">
-                  <div className="relative flex w-[170px] flex-col">
-                    <p class="font-['Roboto'] text-lg font-medium">
-                      Genre<br></br>
-                      Durasi<br></br>
-                      Sutradara<br></br>
-                      Rating Usia
-                    </p>
-                    <p class="font-['Roboto'] text-lg font-medium"></p>
-                  </div>
-                  <div className="flex flex-row">
-                    <p class="font-['Roboto'] text-lg font-medium">
-                      Action<br></br>
-                      2j 25m<br></br>
-                      Sutradara<br></br>
-                      R13+
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="mt-5 mb-10 h-[1px] bg-blue-gray-100" />
 
-              {/* Rating */}
+            <div className="mb-5 flex justify-between">
               <div>
-                <hr className="border-blue-gray-400"></hr>
-                <div className="relative m-2 flex flex-col p-1">
-                  {/* Rating dalam bentuk bintang */}
-                  <div class="ml-1 flex flex-row">
-                    <img
-                      src={ic_star_rating}
-                      alt="rating"
-                      className="relative my-1 ml-1 h-[24px] w-[24px]"
-                    />
-                    <img
-                      src={ic_star_rating}
-                      alt="rating"
-                      className="relative my-1 ml-1 h-[24px] w-[24px]"
-                    />
-                    <img
-                      src={ic_star_rating}
-                      alt="rating"
-                      className="relative my-1 ml-1 h-[24px] w-[24px]"
-                    />
-                    <img
-                      src={ic_star_rating}
-                      alt="rating"
-                      className="relative my-1 ml-1 h-[24px] w-[24px]"
-                    />
-                    <img
-                      src={ic_star_rating}
-                      alt="rating"
-                      className="relative my-1 ml-1 h-[24px] w-[24px]"
-                    />
+                <div className="mb-3 flex items-center gap-3">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-dark-blue">
+                    <img src={ic_star} alt="Icon Star" />
                   </div>
-                  {/* Jumlah Pemilih */}
-                  <div class="ml-2 font-['Roboto'] text-sm font-normal">
-                    9.457 Pemilih
-                  </div>
+                  <h5 className="text-xl font-medium">UNIKOM XXI</h5>
                 </div>
-                <hr className="border-blue-gray-400"></hr>
+                <span>Jl. DIPATIUKUR NO.112 - 116</span>
               </div>
-
-              {/* Detail tiket */}
-              <div className="mx-2 my-2 flex max-w-md flex-col rounded-md border-blue-gray-500 bg-white p-6 shadow-xl">
-                {/* Nama Bioskop Statis */}
-                <div class="mb-4 pb-2 font-['Roboto'] text-2xl font-medium text-black">
-                  UNIKOM XXI
-                </div>
-                {/* Waktu dan yang lainnya Dinamis */}
-                <div className="mt-2 flex flex-col">
-                  <div class="font-['Roboto'] text-sm font-normal text-black">
-                    Senin, 23 Oktober 2024
-                  </div>
-                  <div className="inline-flex justify-between">
-                    <div class="font-['Roboto'] text-2xl font-medium text-black">
-                      GOLD CLASS 2D
-                    </div>
-                    <div class="text-right font-['Roboto'] text-lg font-medium text-black">
-                      14:40
-                    </div>
-                  </div>
-                  <div class="w-[388px] font-['Roboto'] text-xs font-normal text-blue-gray-500">
-                    *Pemiliihan kursi dapat dilakukan setelah ini
-                  </div>
-                </div>
-
-                {/* Button Beli */}
-                <div className="mt-5">
-                  <button
-                    type="submit"
-                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 "
-                  >
-                    Beli Tiket
-                  </button>
-                </div>
+              <div className="flex h-7 items-center justify-center rounded bg-yellow px-2 font-semibold text-white">
+                XXI
               </div>
             </div>
+
+            <div className="mb-4 flex justify-between text-gray">
+              <h5 className="text-xl font-medium">REGULAR 2D</h5>
+              <span>Rp. 45.000 - 50.000</span>
+            </div>
+
+            <div className="mb-8 flex flex-wrap gap-4">
+              <div className="time disabled">15:40</div>
+              <div className="time selected">15:40</div>
+              <div className="time">15:40</div>
+              <div className="time">15:40</div>
+              <div className="time">15:40</div>
+              <div className="time">15:40</div>
+              <div className="time">15:40</div>
+              <div className="time">15:40</div>
+              <div className="time">15:40</div>
+            </div>
+
+            <div className="mb-4 flex justify-between text-gray">
+              <h5 className="text-xl font-medium">GOLD CLASS 2D</h5>
+              <span>Rp. 100.000</span>
+            </div>
+
+            <div className="mb-4 flex flex-wrap gap-4">
+              <div className="time disabled">15:40</div>
+              <div className="time selected">15:40</div>
+              <div className="time">15:40</div>
+            </div>
           </div>
-        </form>
+
+          <div>
+            <img
+              src={thumbnail}
+              alt="Thumbnail"
+              className="mb-10 h-[364px] w-full rounded-lg object-cover"
+            />
+
+            <h5 className="mb-5 text-xl font-medium text-accent-black">
+              SPIDERMAN : NO WAY HOME
+            </h5>
+
+            <table>
+              <tr>
+                <td className="pr-10">Genre</td>
+                <td>Action</td>
+              </tr>
+              <tr>
+                <td className="pr-10">Durasi</td>
+                <td>2 jam 28 menit</td>
+              </tr>
+              <tr>
+                <td className="pr-10">Sutradara</td>
+                <td>Jon Watts</td>
+              </tr>
+              <tr>
+                <td className="pr-10">Rating Usia</td>
+                <td>SU</td>
+              </tr>
+            </table>
+
+            <div className="divider" />
+
+            <div className="flex gap-3">
+              <img src={ic_star} alt="Icon Star" />
+              <img src={ic_star} alt="Icon Star" />
+              <img src={ic_star} alt="Icon Star" />
+              <img src={ic_star} alt="Icon Star" />
+              <img src={ic_star} alt="Icon Star" />
+            </div>
+
+            <div className="divider" />
+
+            <div className="rounded-xl border border-gray p-4">
+              <h4 className="mb-4 text-2xl font-semibold">UNIKOM XXI</h4>
+              <span className="mb-2 block text-gray">
+                Kamis, 16 Desember 2021
+              </span>
+              <div className="mb-4 flex justify-between text-xl font-medium">
+                <span>REGULAR 2D</span>
+                <span>14:40</span>
+              </div>
+
+              <span className="mb-5 block text-xs text-[#9DA8BE]">
+                * Pemilihan kursi dapat dilakukan setelah ini
+              </span>
+
+              <Button isPrimary isBlock>
+                BELI SEKARANG
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </>

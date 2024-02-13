@@ -6,12 +6,12 @@ const Modal = (props) => {
   return (
     <>
       <div
-        className={`fixed inset-0 z-[9999] flex  items-center justify-center overflow-y-auto overflow-x-hidden  outline-none transition-all duration-300 focus:outline-none ${
+        className={`fixed inset-0 z-[9999] flex justify-center overflow-y-auto overflow-x-hidden pt-20  outline-none transition-all duration-300 focus:outline-none ${
           showModal ? "visible opacity-100" : "invisible opacity-0"
         }`}
       >
         <div
-          className={`relative my-6 mx-5 w-[350px] min-w-[500px] md:mx-auto lg:min-w-[800px]`}
+          className={`relative my-6 mx-5 w-[350px] min-w-[500px] md:mx-auto lg:min-w-[600px]`}
         >
           {/*content*/}
           <div className="relative flex max-h-[90vh] w-full flex-col overflow-y-auto rounded-[30px] bg-white p-5">
