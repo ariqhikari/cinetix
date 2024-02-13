@@ -22,6 +22,7 @@ import TransactionSuccess from "pages/TransactionSucces"
 // customer
 import CustomerActiveTickets from "pages/Customer/ActiveTickets"
 import CustomerHistoryTransactions from "pages/Customer/HistoryTransactions"
+import CustomerComplaints from "pages/Admin/CustomerComplaints"
 
 // admin
 import AdminDashboard from "pages/Admin/Dashboard"
@@ -86,7 +87,8 @@ const App = () => {
           >
             <Route path="" element={<Navigate to="dashboard" replace />} />
             <Route path="dashboard" element={<AdminDashboard />} />
-            <Route path="list-film" element={<ListFilmAdmin />} />
+            <Route path="daftar-film" element={<ListFilmAdmin />} />
+            <Route path="keluhan-pelanggan" element={<CustomerComplaints />} />
           </Route>
 
           {/* Not Found */}
