@@ -22,11 +22,12 @@ import TransactionSuccess from "pages/TransactionSucces"
 // customer
 import CustomerActiveTickets from "pages/Customer/ActiveTickets"
 import CustomerHistoryTransactions from "pages/Customer/HistoryTransactions"
-import CustomerComplaints from "pages/Admin/CustomerComplaints"
 
 // admin
 import AdminDashboard from "pages/Admin/Dashboard"
 import ListFilmAdmin from "pages/Admin/FilmList"
+import CustomerComplaints from "pages/Admin/CustomerComplaints"
+import HistoryPayments from "pages/Admin/HistoryPayments"
 
 const App = () => {
   const location = useLocation()
@@ -89,6 +90,7 @@ const App = () => {
             <Route path="dashboard" element={<AdminDashboard />} />
             <Route path="daftar-film" element={<ListFilmAdmin />} />
             <Route path="keluhan-pelanggan" element={<CustomerComplaints />} />
+            <Route path="histori-pembayaran" element={<HistoryPayments />} />
           </Route>
 
           {/* Not Found */}
