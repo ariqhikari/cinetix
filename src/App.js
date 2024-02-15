@@ -19,9 +19,6 @@ import Schedule from "pages/Schedule";
 import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
-import TransactionDetail from "pages/TransactionDetail";
-import Review from "pages/Review";
-import History from "pages/History";
 
 // customer
 import CustomerActiveTickets from "pages/Customer/ActiveTickets";
@@ -69,9 +66,9 @@ const App = () => {
           <Route
             path="/customer"
             element={
-              // <AuthorizeUser>
-              <Customer />
-              // </AuthorizeUser>
+              <AuthorizeUser>
+                <Customer />
+              </AuthorizeUser>
             }
           >
             <Route path="" element={<Navigate to="tiket-aktif" replace />} />
@@ -86,9 +83,9 @@ const App = () => {
           <Route
             path="/admin"
             element={
-              // <AuthorizeUser>
-              <Admin />
-              // </AuthorizeUser>
+              <AuthorizeUser>
+                <Admin />
+              </AuthorizeUser>
             }
           >
             <Route path="" element={<Navigate to="dashboard" replace />} />
