@@ -1,6 +1,48 @@
+import { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import toast from "react-hot-toast";
+
+// features
+import { LoginUser, reset, resetMsg, resetSuccess } from "features/authSlice";
+
+// components
 import Button from "components/Button";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user, isSuccess, isLoading, message } = useSelector(
+    (state) => state.auth
+  );
+
+  useEffect(() => {
+    if (message) toast.error(message);
+    dispatch(resetMsg());
+  }, [message, dispatch]);
+
+  useEffect(() => {
+    if (user) {
+      dispatch(resetSuccess());
+
+      toast.success("Login success");
+
+      if (user.role === "CUSTOMER") navigate("/customer");
+      else if (user.role === "ADMIN") navigate("/admin");
+
+      return;
+    }
+
+    dispatch(reset());
+  }, [user, dispatch, navigate]);
+
+  const Auth = (e) => {
+    e.preventDefault();
+    dispatch(LoginUser({ email, password }));
+  };
+
   return (
     <>
       <div className="flex min-h-screen items-center justify-center bg-[url('assets/images/Background.png')] bg-cover">
@@ -12,7 +54,7 @@ const Login = () => {
           </div>
 
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-4" action="#" method="POST">
+            <form onSubmit={Auth} className="space-y-4">
               <div>
                 <label
                   htmlFor="email"
@@ -25,8 +67,9 @@ const Login = () => {
                     id="email"
                     name="email"
                     type="email"
-                    autoComplete="email"
                     required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="text-gray-900 ring-gray-300 placeholder:text-gray-400 block w-full rounded-md border-0 py-2 px-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -46,15 +89,16 @@ const Login = () => {
                     id="password"
                     name="password"
                     type="password"
-                    autoComplete="current-password"
                     required
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     className="text-gray-900 ring-gray-300 placeholder:text-gray-400 block w-full rounded-md border-0 py-2 px-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
 
               <div>
-                <Button isPrimary isBlock>
+                <Button type="submit" isPrimary isBlock>
                   Masuk Sekarang
                 </Button>
               </div>
@@ -64,7 +108,13 @@ const Login = () => {
                 </p>
               </div>
               <div>
-                <Button isSecondary isBlock>
+                <Button
+                  type="link"
+                  href="/register"
+                  isSecondary
+                  isBlock
+                  className="block text-center"
+                >
                   Daftar Sekarang
                 </Button>
               </div>

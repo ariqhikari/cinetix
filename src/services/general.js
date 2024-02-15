@@ -30,16 +30,15 @@ export const formatDate = (date, format) => {
 
 export const confirmModal = () => {
   return swal.fire({
-    title: "Apa anda yakin? <i class='text-en'>Are you sure?</i>",
-    html: "Anda tidak akan dapat mengembalikan ini! <i class='text-en'>You cannot restore this!</i>",
+    title: "Apa anda yakin?",
+    html: "Anda tidak akan dapat mengembalikan ini!",
     icon: "warning",
-    confirmButtonText: "Ya / <i>Yes</i>",
-    cancelButtonText: "Tidak / <i>No</i>",
+    confirmButtonText: "Ya",
+    cancelButtonText: "Tidak",
     showCancelButton: true,
     buttonsStyling: false,
     customClass: {
-      confirmButton:
-        "button bg-primary-yellow text-white text-lg font-medium mr-2",
+      confirmButton: "button bg-green text-white text-lg font-medium mr-2",
       cancelButton: "button bg-red text-white text-lg font-medium",
     },
   });

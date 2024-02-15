@@ -1,12 +1,16 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+
+// services
+import { getNowPlaying } from "services/Movie";
 
 // components
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
+import MovieItem from "components/MovieItem";
 
 // assets
-import thumbnail from "assets/images/thumbnail.png";
 import banner from "assets/images/banner.png";
 
 import "swiper/css";
@@ -24,6 +28,21 @@ const Home = () => {
     sliderRef.current.swiper.slideNext();
   }, []);
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    try {
+      const response = await getNowPlaying();
+      setData(response.data.body.data.movies);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -40,60 +59,11 @@ const Home = () => {
           }}
           className="mx-5 mt-10 lg:mx-80"
         >
-          <SwiperSlide>
-            <img
-              src={thumbnail}
-              alt=""
-              className="h-[600px] w-full rounded-2xl object-cover"
-            />
-            <h2 className="mt-6 text-center text-xl font-bold">
-              Spiderman : No Way Home
-            </h2>
-            <div className="mt-5 flex w-full justify-center gap-4">
-              <div className="rounded bg-yellow px-2 py-1 text-white">
-                Action
-              </div>
-              <div className="rounded bg-yellow px-2 py-1 text-white">
-                Fantasy
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={thumbnail}
-              alt=""
-              className="h-[600px] w-full rounded-2xl object-cover"
-            />
-            <h2 className="mt-6 text-center text-xl font-bold">
-              Spiderman : No Way Home
-            </h2>
-            <div className="mt-5 flex w-full justify-center gap-4">
-              <div className="rounded bg-yellow px-2 py-1 text-white">
-                Action
-              </div>
-              <div className="rounded bg-yellow px-2 py-1 text-white">
-                Fantasy
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <img
-              src={thumbnail}
-              alt=""
-              className="h-[600px] w-full rounded-2xl object-cover"
-            />
-            <h2 className="mt-6 text-center text-xl font-bold">
-              Spiderman : No Way Home
-            </h2>
-            <div className="mt-5 flex w-full justify-center gap-4">
-              <div className="rounded bg-yellow px-2 py-1 text-white">
-                Action
-              </div>
-              <div className="rounded bg-yellow px-2 py-1 text-white">
-                Fantasy
-              </div>
-            </div>
-          </SwiperSlide>
+          {data.map((movie, index) => (
+            <SwiperSlide key={`movie-slide-${index}`}>
+              <MovieItem data={movie} />
+            </SwiperSlide>
+          ))}
         </Swiper>
         <div
           className="arrow-slider absolute top-64 left-48"
@@ -144,59 +114,14 @@ const Home = () => {
           <h4 className="text-xl font-semibold">Akan Datang</h4>
           <p>Tunggu kehadirannya di bioskop kesayangan kamu!</p>
         </div>
-        <a href="#" className="text-light-blue-600">
+        <Link to="/list-film" className="text-light-blue-600">
           Lihat Semua
-        </a>
+        </Link>
       </div>
       <div className="mx-5 my-14 grid gap-5 md:grid-cols-2 lg:mx-20 lg:grid-cols-3">
-        <div>
-          <img
-            src={thumbnail}
-            alt=""
-            className="h-[600px] w-full rounded-2xl object-cover"
-          />
-          <h2 className="mt-6 text-center text-xl font-bold">
-            Spiderman : No Way Home
-          </h2>
-          <div className="mt-5 flex w-full justify-center gap-4">
-            <div className="rounded bg-yellow px-2 py-1 text-white">Action</div>
-            <div className="rounded bg-yellow px-2 py-1 text-white">
-              Fantasy
-            </div>
-          </div>
-        </div>
-        <div>
-          <img
-            src={thumbnail}
-            alt=""
-            className="h-[600px] w-full rounded-2xl object-cover"
-          />
-          <h2 className="mt-6 text-center text-xl font-bold">
-            Spiderman : No Way Home
-          </h2>
-          <div className="mt-5 flex w-full justify-center gap-4">
-            <div className="rounded bg-yellow px-2 py-1 text-white">Action</div>
-            <div className="rounded bg-yellow px-2 py-1 text-white">
-              Fantasy
-            </div>
-          </div>
-        </div>
-        <div>
-          <img
-            src={thumbnail}
-            alt=""
-            className="h-[600px] w-full rounded-2xl object-cover"
-          />
-          <h2 className="mt-6 text-center text-xl font-bold">
-            Spiderman : No Way Home
-          </h2>
-          <div className="mt-5 flex w-full justify-center gap-4">
-            <div className="rounded bg-yellow px-2 py-1 text-white">Action</div>
-            <div className="rounded bg-yellow px-2 py-1 text-white">
-              Fantasy
-            </div>
-          </div>
-        </div>
+        {data.map((movie, index) => (
+          <MovieItem key={`movie-${index}`} data={movie} />
+        ))}
       </div>
 
       <Footer />

@@ -13,7 +13,8 @@ import AuthorizeUser from "middleware/Auth";
 // pages
 import Home from "pages/Home";
 import Login from "pages/Login";
-import ListFilm from "pages/ListFilm";
+import Register from "pages/Register";
+import ListMovie from "pages/ListMovie";
 import Schedule from "pages/Schedule";
 import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
@@ -47,8 +48,9 @@ const App = () => {
           <Route path="/" element={<Default />}>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/list-film" element={<ListFilm />} />
-            <Route path="/jl" adwa element={<Schedule />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/list-film" element={<ListMovie />} />
+            <Route path="/jadwal" element={<Schedule />} />
             <Route path="/pemilihan-kursi" element={<ChoosingSeats />} />
             <Route path="/pembayaran" element={<Transaction />} />
             <Route
