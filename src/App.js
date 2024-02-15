@@ -19,6 +19,9 @@ import Schedule from "pages/Schedule";
 import ChoosingSeats from "pages/ChoosingSeats";
 import Transaction from "pages/Transaction";
 import TransactionSuccess from "pages/TransactionSucces";
+import TransactionDetail from "pages/TransactionDetail";
+import Review from "pages/Review";
+import History from "pages/History";
 
 // customer
 import CustomerActiveTickets from "pages/Customer/ActiveTickets";
